@@ -153,7 +153,7 @@ Sparse matrix-vector multiplication</h1>
 <h1><a class="anchor" id="userfun"></a>
 User-defined functions</h1>
 <p>Simple arithmetic expressions are sometimes not enough. Imagine that you need to count how many elements in vector x are greater that their counterparts in vector y. This may be achieved by introduction of custom function. In order to build such a function, you need to supply its body, its return type and types of its arguments. After that, you can apply the function to any valid vector expressions: </p>
-<div class="fragment"><div class="line">VEX_FUNCTION(greater, <span class="keywordtype">size_t</span>(<span class="keywordtype">float</span>, <span class="keywordtype">float</span>), <span class="stringliteral">&quot;return prm1 &gt; prm2 ? 1 : 0;&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code" href="operations_8hpp.html#aff85c71f5e6716591cf5948f92e093b3" title="Macro to declare a user function.">VEX_FUNCTION</a>(greater, <span class="keywordtype">size_t</span>(<span class="keywordtype">float</span>, <span class="keywordtype">float</span>), <span class="stringliteral">&quot;return prm1 &gt; prm2 ? 1 : 0;&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">size_t</span> count_if_greater(</div>
 <div class="line">    <span class="keyword">const</span> Reductor&lt;size_t, SUM&gt; &amp;sum,</div>

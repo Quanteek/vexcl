@@ -47,6 +47,7 @@
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">operations.hpp File Reference</div>  </div>
@@ -84,6 +85,15 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression template library for OpenCL. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aa1d4c5e357eb570d7e06b493c96c7dcf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#aa1d4c5e357eb570d7e06b493c96c7dcf">VEX_FUNCTION_TYPE</a>(name, signature, body_str)</td></tr>
+<tr class="memdesc:aa1d4c5e357eb570d7e06b493c96c7dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a user function type.  <a href="#aa1d4c5e357eb570d7e06b493c96c7dcf"></a><br/></td></tr>
+<tr class="separator:aa1d4c5e357eb570d7e06b493c96c7dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff85c71f5e6716591cf5948f92e093b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#aff85c71f5e6716591cf5948f92e093b3">VEX_FUNCTION</a>(name, signature, body)&#160;&#160;&#160;<a class="el" href="operations_8hpp.html#aa1d4c5e357eb570d7e06b493c96c7dcf">VEX_FUNCTION_TYPE</a>(user_function_##name##_body, signature, body) name</td></tr>
+<tr class="memdesc:aff85c71f5e6716591cf5948f92e093b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a user function.  <a href="#aff85c71f5e6716591cf5948f92e093b3"></a><br/></td></tr>
+<tr class="separator:aff85c71f5e6716591cf5948f92e093b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad1ffc8adc46bd709080cf30363531785"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1ffc8adc46bd709080cf30363531785"></a>
@@ -95,7 +105,85 @@ boost::proto::result_of::as_expr<br class="typebreak"/>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Set of operations to be used in vector expressions. </p>
 <dl class="section author"><dt>Author</dt><dd>Denis Demidov <a href="#" onclick="location.href='mai'+'lto:'+'dde'+'mi'+'dov'+'@k'+'su.'+'ru'; return false;">ddemi<span style="display: none;">.nosp@m.</span>dov@<span style="display: none;">.nosp@m.</span>ksu.r<span style="display: none;">.nosp@m.</span>u</a> </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="aff85c71f5e6716591cf5948f92e093b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VEX_FUNCTION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">signature, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">body&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="operations_8hpp.html#aa1d4c5e357eb570d7e06b493c96c7dcf">VEX_FUNCTION_TYPE</a>(user_function_##name##_body, signature, body) name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro to declare a user function. </p>
+<div class="fragment"><div class="line"><a class="code" href="operations_8hpp.html#aff85c71f5e6716591cf5948f92e093b3" title="Macro to declare a user function.">VEX_FUNCTION</a>(pow3, <span class="keywordtype">double</span>(<span class="keywordtype">double</span>), <span class="stringliteral">&quot;return pow(prm1, 3.0);&quot;</span>);</div>
+<div class="line">output = pow3(input);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="aa1d4c5e357eb570d7e06b493c96c7dcf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VEX_FUNCTION_TYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">signature, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">body_str&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>name : UserFunction&lt;name, signature&gt; { \</div>
+<div class="line">        static std::string body() { <span class="keywordflow">return</span> body_str; } \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>Macro to declare a user function type. </p>
+<div class="fragment"><div class="line"><a class="code" href="operations_8hpp.html#aa1d4c5e357eb570d7e06b493c96c7dcf" title="Macro to declare a user function type.">VEX_FUNCTION_TYPE</a>(pow3_t, <span class="keywordtype">double</span>(<span class="keywordtype">double</span>), <span class="stringliteral">&quot;return pow(prm1, 3.0);&quot;</span>);</div>
+<div class="line">pow3_t pow3;</div>
+<div class="line">output = pow3(input);</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Should be used in case same function is used in several places (to save on OpenCL kernel recompilations). Otherwise VEX_FUNCTION should be used locally. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
