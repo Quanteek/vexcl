@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>VexCL: vex::StencilOperator&lt; T, width, center, body &gt; Class Template Reference</title>
+<title>VexCL: vex::StencilOperator&lt; T, width, center, Impl &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -50,7 +50,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classvex_1_1StencilOperator-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">vex::StencilOperator&lt; T, width, center, body &gt; Class Template Reference</div>  </div>
+<div class="title">vex::StencilOperator&lt; T, width, center, Impl &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -63,26 +63,26 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ac5a4c3c1f7449c902eb4088e3b4878b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5a4c3c1f7449c902eb4088e3b4878b6"></a>
+<tr class="memitem:a13aa711430e6754aef7dfbd8c27bf10f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13aa711430e6754aef7dfbd8c27bf10f"></a>
 typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
-<tr class="separator:ac5a4c3c1f7449c902eb4088e3b4878b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a13aa711430e6754aef7dfbd8c27bf10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5b96539c4f4a34e1ac15f310f245bfb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b96539c4f4a34e1ac15f310f245bfb0"></a>
+<tr class="memitem:ad093eb125b95352e722065691db0b1e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad093eb125b95352e722065691db0b1e0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>StencilOperator</b> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
-<tr class="separator:a5b96539c4f4a34e1ac15f310f245bfb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b797577e24105e981cc45d915a4b8fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b797577e24105e981cc45d915a4b8fd"></a>
+<tr class="separator:ad093eb125b95352e722065691db0b1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a858c2294b67459528ac27d06f4b659"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a858c2294b67459528ac27d06f4b659"></a>
 conv&lt; <a class="el" href="classvex_1_1StencilOperator.html">StencilOperator</a>, <a class="el" href="classvex_1_1vector.html">vector</a><br class="typebreak"/>
 &lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &amp;x) const </td></tr>
-<tr class="separator:a9b797577e24105e981cc45d915a4b8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a843c3682e2a79b5b639c8006f62a2b3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a843c3682e2a79b5b639c8006f62a2b3e"></a>
+<tr class="separator:a1a858c2294b67459528ac27d06f4b659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6daef71014dffe0924c18008337213ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6daef71014dffe0924c18008337213ed"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>convolve</b> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;y, T alpha=0, T beta=1) const </td></tr>
-<tr class="separator:a843c3682e2a79b5b639c8006f62a2b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a6daef71014dffe0924c18008337213ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, uint width, uint center, const char * body&gt;<br/>
-class vex::StencilOperator&lt; T, width, center, body &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T, uint width, uint center, class Impl&gt;<br/>
+class vex::StencilOperator&lt; T, width, center, Impl &gt;</h3>
 
 <p>User-defined stencil operator. </p>
 <p>Is used to define custom stencil operator. For example, to implement the following nonlinear operator: </p>

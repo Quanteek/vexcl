@@ -48,6 +48,7 @@
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">stencil.hpp File Reference</div>  </div>
@@ -85,7 +86,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1stencil.html">vex::stencil&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stencil.  <a href="classvex_1_1stencil.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1StencilOperator.html">vex::StencilOperator&lt; T, width, center, body &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1StencilOperator.html">vex::StencilOperator&lt; T, width, center, Impl &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User-defined stencil operator.  <a href="classvex_1_1StencilOperator.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -94,6 +95,15 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
 <tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression template library for OpenCL. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a382f8cf99fdf905e87856c4a01bf4fab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stencil_8hpp.html#a382f8cf99fdf905e87856c4a01bf4fab">VEX_STENCIL_OPERATOR_TYPE</a>(name, type, width, center, body_str)</td></tr>
+<tr class="memdesc:a382f8cf99fdf905e87856c4a01bf4fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a user-defined stencil operator type.  <a href="#a382f8cf99fdf905e87856c4a01bf4fab"></a><br/></td></tr>
+<tr class="separator:a382f8cf99fdf905e87856c4a01bf4fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48de2489c51353e5e84a0e23f4b945c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stencil_8hpp.html#a48de2489c51353e5e84a0e23f4b945c9">VEX_STENCIL_OPERATOR</a>(name, type, width, center, body, queue)&#160;&#160;&#160;<a class="el" href="stencil_8hpp.html#a382f8cf99fdf905e87856c4a01bf4fab">VEX_STENCIL_OPERATOR_TYPE</a>(stencil_operator_##name##_t, type, width, center, body) name(queue)</td></tr>
+<tr class="memdesc:a48de2489c51353e5e84a0e23f4b945c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a user-defined stencil operator.  <a href="#a48de2489c51353e5e84a0e23f4b945c9"></a><br/></td></tr>
+<tr class="separator:a48de2489c51353e5e84a0e23f4b945c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -109,7 +119,116 @@ template&lt;typename T &gt; </td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Stencil convolution. </p>
 <dl class="section author"><dt>Author</dt><dd>Denis Demidov <a href="#" onclick="location.href='mai'+'lto:'+'dde'+'mi'+'dov'+'@k'+'su.'+'ru'; return false;">ddemi<span style="display: none;">.nosp@m.</span>dov@<span style="display: none;">.nosp@m.</span>ksu.r<span style="display: none;">.nosp@m.</span>u</a> </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a48de2489c51353e5e84a0e23f4b945c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VEX_STENCIL_OPERATOR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">width, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">center, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">body, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">queue&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="stencil_8hpp.html#a382f8cf99fdf905e87856c4a01bf4fab">VEX_STENCIL_OPERATOR_TYPE</a>(stencil_operator_##name##_t, type, width, center, body) name(queue)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro to declare a user-defined stencil operator. </p>
+<div class="fragment"><div class="line"><a class="code" href="stencil_8hpp.html#a48de2489c51353e5e84a0e23f4b945c9" title="Macro to declare a user-defined stencil operator.">VEX_STENCIL_OPERATOR</a>(pow3_oper, <span class="keywordtype">double</span>, 3, 1, <span class="stringliteral">&quot;return X[0] + pow(X[-1] + X[1], 3.0);&quot;</span>, queue);</div>
+<div class="line">output = pow3_oper(input);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="a382f8cf99fdf905e87856c4a01bf4fab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VEX_STENCIL_OPERATOR_TYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">width, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">center, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">body_str&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>name : StencilOperator&lt;type, width, center, name&gt; { \</div>
+<div class="line">        name(<span class="keyword">const</span> std::vector&lt;cl::CommandQueue&gt; &amp;q) : StencilOperator&lt;type, width, center, name&gt;(q) {} \</div>
+<div class="line">        static std::string body() { <span class="keywordflow">return</span> body_str; } \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>Macro to declare a user-defined stencil operator type. </p>
+<div class="fragment"><div class="line"><a class="code" href="stencil_8hpp.html#a382f8cf99fdf905e87856c4a01bf4fab" title="Macro to declare a user-defined stencil operator type.">VEX_STENCIL_OPERATOR_TYPE</a>(pow3_oper_t, <span class="keywordtype">double</span>, 3, 1, <span class="stringliteral">&quot;return X[0] + pow(X[-1] + X[1], 3.0);&quot;</span>);</div>
+<div class="line">pow3_oper_t pow3_oper(ctx.queue());</div>
+<div class="line">output = pow3_oper(input);</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Should be used in case same operator is used in several places (to save on OpenCL kernel recompilations). Otherwise VEX_STENCIL_OPERATOR should be used locally. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
