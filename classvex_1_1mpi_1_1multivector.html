@@ -260,7 +260,7 @@ template&lt;typename T, size_t N, bool own&gt; </div>
   <table class="params">
     <tr><td class="paramname">comm</td><td>MPI communicator. </td></tr>
     <tr><td class="paramname">queue</td><td>queue list to be shared between all components. </td></tr>
-    <tr><td class="paramname">size</td><td>Local size of each component. </td></tr>
+    <tr><td class="paramname">n</td><td>Local size of each component. </td></tr>
     <tr><td class="paramname">host</td><td>Host vector that holds local data to be copied to the components. Size of host vector should be divisible by N. Components of the created multivector will have size equal to host.size() / N. The data will be partitioned equally between all components. </td></tr>
     <tr><td class="paramname">flags</td><td>cl::Buffer creation flags. </td></tr>
   </table>

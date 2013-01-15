@@ -69,9 +69,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a489e82323e1d9c0fe021e591b0a983b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a489e82323e1d9c0fe021e591b0a983b9">tic_cl</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a489e82323e1d9c0fe021e591b0a983b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a marker into each of the provided queues.  <a href="#a489e82323e1d9c0fe021e591b0a983b9"></a><br/></td></tr>
 <tr class="separator:a489e82323e1d9c0fe021e591b0a983b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05e8dc06939d4b775d5676eab885c464"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a05e8dc06939d4b775d5676eab885c464">toc</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a05e8dc06939d4b775d5676eab885c464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns time since last tic.  <a href="#a05e8dc06939d4b775d5676eab885c464"></a><br/></td></tr>
-<tr class="separator:a05e8dc06939d4b775d5676eab885c464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f337c2afb72e3fb7a8f8dc6e13136a7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a4f337c2afb72e3fb7a8f8dc6e13136a7">toc</a> (const std::string &amp;)</td></tr>
+<tr class="memdesc:a4f337c2afb72e3fb7a8f8dc6e13136a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns time since last tic.  <a href="#a4f337c2afb72e3fb7a8f8dc6e13136a7"></a><br/></td></tr>
+<tr class="separator:a4f337c2afb72e3fb7a8f8dc6e13136a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f18440653a0297cd837eba51fd63d93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f18440653a0297cd837eba51fd63d93"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a9f18440653a0297cd837eba51fd63d93">print</a> (std::ostream &amp;out)</td></tr>
 <tr class="memdesc:a9f18440653a0297cd837eba51fd63d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs profile to the provided stream. <br/></td></tr>
@@ -192,7 +192,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a class="anchor" id="a05e8dc06939d4b775d5676eab885c464"></a>
+<a class="anchor" id="a4f337c2afb72e3fb7a8f8dc6e13136a7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -203,7 +203,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="memname">double vex::profiler::toc </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -216,12 +216,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Returns time since last tic. </p>
 <p>Also removes interval from the top of the profiler hierarchy. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>name of the measured interval. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 <p>Referenced by <a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">vex::device_spmv_perf()</a>, and <a class="el" href="namespacevex.html#a47b97ac4ec3d1d74e854ec44c0c800d2">vex::device_vector_perf()</a>.</p>
 

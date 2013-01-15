@@ -1,9 +1,10 @@
 <map id="reduce.hpp" name="reduce.hpp">
-<area shape="rect" id="node5" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="1064,80,1193,107"/>
-<area shape="rect" id="node74" href="$mpi_2util_8hpp.html" title="MPI related utilities." alt="" coords="323,80,456,107"/>
-<area shape="rect" id="node81" href="$mpi_2operations_8hpp.html" title="Set of operations to be used in mpi::vector expressions." alt="" coords="1578,155,1760,181"/>
-<area shape="rect" id="node15" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="943,155,1068,181"/>
-<area shape="rect" id="node31" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="907,229,1012,256"/>
-<area shape="rect" id="node48" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="529,229,657,256"/>
-<area shape="rect" id="node65" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="1716,229,1869,256"/>
+<area shape="rect" id="node5" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="1077,80,1205,107"/>
+<area shape="rect" id="node81" href="$mpi_2util_8hpp.html" title="MPI related utilities." alt="" coords="1607,80,1739,107"/>
+<area shape="rect" id="node88" href="$mpi_2operations_8hpp.html" title="Set of operations to be used in mpi::vector expressions." alt="" coords="2079,155,2260,181"/>
+<area shape="rect" id="node15" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1141,155,1264,181"/>
+<area shape="rect" id="node31" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="848,229,952,256"/>
+<area shape="rect" id="node55" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1405,229,1533,256"/>
+<area shape="rect" id="node72" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="2215,229,2368,256"/>
+<area shape="rect" id="node53" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl::float4, operator+." alt="" coords="824,312,944,339"/>
 </map>
