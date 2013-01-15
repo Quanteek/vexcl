@@ -47,8 +47,8 @@
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">types.hpp File Reference</div>  </div>
@@ -69,9 +69,17 @@
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1scalar__of.html">cl::scalar_of&lt; T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1cl__scalar__of.html">vex::cl_scalar_of&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the corresponding scalar type for a CL vector (or scalar) type.  <a href="structvex_1_1cl__scalar__of.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1vector__of.html">cl::vector_of&lt; T, dim &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1cl__vector__of.html">vex::cl_vector_of&lt; T, dim &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the corresponding vector type for a CL scalar type.  <a href="structvex_1_1cl__vector__of.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
+<tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression template library for OpenCL. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -84,129 +92,6 @@ Macros</h2></td></tr>
 <tr class="separator:ace7250cb865c9fb8f44aa1b0b9a121e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77e762bfd6e83e7d2e6bba562b3bba44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>CL_TYPES</b>(base_type)</td></tr>
 <tr class="separator:a77e762bfd6e83e7d2e6bba562b3bba44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a85d4accf51f24375e62a4b9864925c9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85d4accf51f24375e62a4b9864925c9d"></a>
-typedef cl_float2&#160;</td><td class="memItemRight" valign="bottom"><b>cl::float2</b></td></tr>
-<tr class="separator:a85d4accf51f24375e62a4b9864925c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c07c66ee27f413fe52e0e1358c1b719"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c07c66ee27f413fe52e0e1358c1b719"></a>
-typedef cl_float4&#160;</td><td class="memItemRight" valign="bottom"><b>cl::float4</b></td></tr>
-<tr class="separator:a9c07c66ee27f413fe52e0e1358c1b719"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b8c3ca6365f982cc7482353b1a03ad3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b8c3ca6365f982cc7482353b1a03ad3"></a>
-typedef cl_float8&#160;</td><td class="memItemRight" valign="bottom"><b>cl::float8</b></td></tr>
-<tr class="separator:a7b8c3ca6365f982cc7482353b1a03ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88a9a153e16a17f63667ca03a532157f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88a9a153e16a17f63667ca03a532157f"></a>
-typedef cl_float16&#160;</td><td class="memItemRight" valign="bottom"><b>cl::float16</b></td></tr>
-<tr class="separator:a88a9a153e16a17f63667ca03a532157f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d294e6855af8b16c7e7d712db57365a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d294e6855af8b16c7e7d712db57365a"></a>
-typedef cl_double2&#160;</td><td class="memItemRight" valign="bottom"><b>cl::double2</b></td></tr>
-<tr class="separator:a5d294e6855af8b16c7e7d712db57365a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af993cd107746a4711ce13f50e857b5d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af993cd107746a4711ce13f50e857b5d3"></a>
-typedef cl_double4&#160;</td><td class="memItemRight" valign="bottom"><b>cl::double4</b></td></tr>
-<tr class="separator:af993cd107746a4711ce13f50e857b5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41275cf9d37179cef2a002e5e1f851d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41275cf9d37179cef2a002e5e1f851d7"></a>
-typedef cl_double8&#160;</td><td class="memItemRight" valign="bottom"><b>cl::double8</b></td></tr>
-<tr class="separator:a41275cf9d37179cef2a002e5e1f851d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2af8d0c96e4c211066d82a68b09f061"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2af8d0c96e4c211066d82a68b09f061"></a>
-typedef cl_double16&#160;</td><td class="memItemRight" valign="bottom"><b>cl::double16</b></td></tr>
-<tr class="separator:ae2af8d0c96e4c211066d82a68b09f061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a829b130583670a544f44c22d6ec0ed3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a829b130583670a544f44c22d6ec0ed3e"></a>
-typedef cl_char2&#160;</td><td class="memItemRight" valign="bottom"><b>cl::char2</b></td></tr>
-<tr class="separator:a829b130583670a544f44c22d6ec0ed3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada800748443c1bfa4899af178c923338"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada800748443c1bfa4899af178c923338"></a>
-typedef cl_char4&#160;</td><td class="memItemRight" valign="bottom"><b>cl::char4</b></td></tr>
-<tr class="separator:ada800748443c1bfa4899af178c923338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5568c188e4be1be6fe99c482f27ada2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5568c188e4be1be6fe99c482f27ada2e"></a>
-typedef cl_char8&#160;</td><td class="memItemRight" valign="bottom"><b>cl::char8</b></td></tr>
-<tr class="separator:a5568c188e4be1be6fe99c482f27ada2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95c6fb7d27aa3cb2f51577fc20eb34a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95c6fb7d27aa3cb2f51577fc20eb34a0"></a>
-typedef cl_char16&#160;</td><td class="memItemRight" valign="bottom"><b>cl::char16</b></td></tr>
-<tr class="separator:a95c6fb7d27aa3cb2f51577fc20eb34a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6bf0633151fa66a58e83c9a54d5b10c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6bf0633151fa66a58e83c9a54d5b10c"></a>
-typedef cl_uchar2&#160;</td><td class="memItemRight" valign="bottom"><b>cl::uchar2</b></td></tr>
-<tr class="separator:aa6bf0633151fa66a58e83c9a54d5b10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ade8c0f017c532fe25c9dff38eec5c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ade8c0f017c532fe25c9dff38eec5c1"></a>
-typedef cl_uchar4&#160;</td><td class="memItemRight" valign="bottom"><b>cl::uchar4</b></td></tr>
-<tr class="separator:a7ade8c0f017c532fe25c9dff38eec5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12675b4a17f928c5c6f27261403ed8e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12675b4a17f928c5c6f27261403ed8e4"></a>
-typedef cl_uchar8&#160;</td><td class="memItemRight" valign="bottom"><b>cl::uchar8</b></td></tr>
-<tr class="separator:a12675b4a17f928c5c6f27261403ed8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeecc81b8ecaeb57c76810b45e8859f67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeecc81b8ecaeb57c76810b45e8859f67"></a>
-typedef cl_uchar16&#160;</td><td class="memItemRight" valign="bottom"><b>cl::uchar16</b></td></tr>
-<tr class="separator:aeecc81b8ecaeb57c76810b45e8859f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47007c50689d47b4200e608001e3a570"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47007c50689d47b4200e608001e3a570"></a>
-typedef cl_short2&#160;</td><td class="memItemRight" valign="bottom"><b>cl::short2</b></td></tr>
-<tr class="separator:a47007c50689d47b4200e608001e3a570"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fad14d2421ceb7afb31aeae83234cd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fad14d2421ceb7afb31aeae83234cd5"></a>
-typedef cl_short4&#160;</td><td class="memItemRight" valign="bottom"><b>cl::short4</b></td></tr>
-<tr class="separator:a6fad14d2421ceb7afb31aeae83234cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a691b76c00223ce8d4087db529ebc741a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a691b76c00223ce8d4087db529ebc741a"></a>
-typedef cl_short8&#160;</td><td class="memItemRight" valign="bottom"><b>cl::short8</b></td></tr>
-<tr class="separator:a691b76c00223ce8d4087db529ebc741a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab3facea966c516985144fec4d89116e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab3facea966c516985144fec4d89116e"></a>
-typedef cl_short16&#160;</td><td class="memItemRight" valign="bottom"><b>cl::short16</b></td></tr>
-<tr class="separator:aab3facea966c516985144fec4d89116e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02e9071d3a79aeb01dcbb5ca4076da04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02e9071d3a79aeb01dcbb5ca4076da04"></a>
-typedef cl_ushort2&#160;</td><td class="memItemRight" valign="bottom"><b>cl::ushort2</b></td></tr>
-<tr class="separator:a02e9071d3a79aeb01dcbb5ca4076da04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b1e3c76da405073bebe6ba799d19c47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b1e3c76da405073bebe6ba799d19c47"></a>
-typedef cl_ushort4&#160;</td><td class="memItemRight" valign="bottom"><b>cl::ushort4</b></td></tr>
-<tr class="separator:a8b1e3c76da405073bebe6ba799d19c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59f60cfcbdd70aebe498305472e7208d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59f60cfcbdd70aebe498305472e7208d"></a>
-typedef cl_ushort8&#160;</td><td class="memItemRight" valign="bottom"><b>cl::ushort8</b></td></tr>
-<tr class="separator:a59f60cfcbdd70aebe498305472e7208d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a087767c624c67d73ee31ff149055a7bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a087767c624c67d73ee31ff149055a7bc"></a>
-typedef cl_ushort16&#160;</td><td class="memItemRight" valign="bottom"><b>cl::ushort16</b></td></tr>
-<tr class="separator:a087767c624c67d73ee31ff149055a7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a816b68b778b48c2bd0677a75338fe56d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a816b68b778b48c2bd0677a75338fe56d"></a>
-typedef cl_int2&#160;</td><td class="memItemRight" valign="bottom"><b>cl::int2</b></td></tr>
-<tr class="separator:a816b68b778b48c2bd0677a75338fe56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cf1d17d4d728f582f4ea77a3393c98a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cf1d17d4d728f582f4ea77a3393c98a"></a>
-typedef cl_int4&#160;</td><td class="memItemRight" valign="bottom"><b>cl::int4</b></td></tr>
-<tr class="separator:a2cf1d17d4d728f582f4ea77a3393c98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20b2ef7932d140ccb38ec02e302fd131"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20b2ef7932d140ccb38ec02e302fd131"></a>
-typedef cl_int8&#160;</td><td class="memItemRight" valign="bottom"><b>cl::int8</b></td></tr>
-<tr class="separator:a20b2ef7932d140ccb38ec02e302fd131"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7f565aa3c754cba8587324ff7d3e26d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7f565aa3c754cba8587324ff7d3e26d"></a>
-typedef cl_int16&#160;</td><td class="memItemRight" valign="bottom"><b>cl::int16</b></td></tr>
-<tr class="separator:ae7f565aa3c754cba8587324ff7d3e26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3096d971ea3fabb6c5334c8dfaa2e7d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3096d971ea3fabb6c5334c8dfaa2e7d2"></a>
-typedef cl_uint2&#160;</td><td class="memItemRight" valign="bottom"><b>cl::uint2</b></td></tr>
-<tr class="separator:a3096d971ea3fabb6c5334c8dfaa2e7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a140e4b09ca857adb025a0f63555a4c35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a140e4b09ca857adb025a0f63555a4c35"></a>
-typedef cl_uint4&#160;</td><td class="memItemRight" valign="bottom"><b>cl::uint4</b></td></tr>
-<tr class="separator:a140e4b09ca857adb025a0f63555a4c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b7f87c987b98691d7f23a1dc7456990"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b7f87c987b98691d7f23a1dc7456990"></a>
-typedef cl_uint8&#160;</td><td class="memItemRight" valign="bottom"><b>cl::uint8</b></td></tr>
-<tr class="separator:a8b7f87c987b98691d7f23a1dc7456990"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b467c9ec87dbecb7a21f47af81b3be0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b467c9ec87dbecb7a21f47af81b3be0"></a>
-typedef cl_uint16&#160;</td><td class="memItemRight" valign="bottom"><b>cl::uint16</b></td></tr>
-<tr class="separator:a9b467c9ec87dbecb7a21f47af81b3be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94c7ebd125b6ceedc366e44e9cb0616f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94c7ebd125b6ceedc366e44e9cb0616f"></a>
-typedef cl_long2&#160;</td><td class="memItemRight" valign="bottom"><b>cl::long2</b></td></tr>
-<tr class="separator:a94c7ebd125b6ceedc366e44e9cb0616f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84620aaf1079cd2f5004308757cbe3e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84620aaf1079cd2f5004308757cbe3e7"></a>
-typedef cl_long4&#160;</td><td class="memItemRight" valign="bottom"><b>cl::long4</b></td></tr>
-<tr class="separator:a84620aaf1079cd2f5004308757cbe3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abee4ca976dd58a2d5876f961baed4b93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abee4ca976dd58a2d5876f961baed4b93"></a>
-typedef cl_long8&#160;</td><td class="memItemRight" valign="bottom"><b>cl::long8</b></td></tr>
-<tr class="separator:abee4ca976dd58a2d5876f961baed4b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef8b4d9dff8595d95b5c4f86e94d169c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef8b4d9dff8595d95b5c4f86e94d169c"></a>
-typedef cl_long16&#160;</td><td class="memItemRight" valign="bottom"><b>cl::long16</b></td></tr>
-<tr class="separator:aef8b4d9dff8595d95b5c4f86e94d169c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ae8c02548490a64f2ae3c70beea91f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ae8c02548490a64f2ae3c70beea91f2"></a>
-typedef cl_ulong2&#160;</td><td class="memItemRight" valign="bottom"><b>cl::ulong2</b></td></tr>
-<tr class="separator:a0ae8c02548490a64f2ae3c70beea91f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1b912b11d1d21e4f571f15912f53212"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1b912b11d1d21e4f571f15912f53212"></a>
-typedef cl_ulong4&#160;</td><td class="memItemRight" valign="bottom"><b>cl::ulong4</b></td></tr>
-<tr class="separator:aa1b912b11d1d21e4f571f15912f53212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b37e261e96c9de591d1393ba665abd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b37e261e96c9de591d1393ba665abd9"></a>
-typedef cl_ulong8&#160;</td><td class="memItemRight" valign="bottom"><b>cl::ulong8</b></td></tr>
-<tr class="separator:a6b37e261e96c9de591d1393ba665abd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ba83f91a6375ca9661b96b30e5f77b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ba83f91a6375ca9661b96b30e5f77b5"></a>
-typedef cl_ulong16&#160;</td><td class="memItemRight" valign="bottom"><b>cl::ulong16</b></td></tr>
-<tr class="separator:a1ba83f91a6375ca9661b96b30e5f77b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -2953,8 +2838,8 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <div class="line">CL_VEC_TYPE(base_type, 4); \</div>
 <div class="line">CL_VEC_TYPE(base_type, 8); \</div>
 <div class="line">CL_VEC_TYPE(base_type, 16); \</div>
-<div class="line">namespace cl { \</div>
-<div class="line">    template &lt;&gt; <span class="keyword">struct </span>scalar_of&lt;cl_##base_type&gt; { <span class="keyword">typedef</span> cl_##base_type type; }; \</div>
+<div class="line">namespace vex { \</div>
+<div class="line">    template &lt;&gt; <span class="keyword">struct </span>cl_scalar_of&lt;cl_##base_type&gt; { <span class="keyword">typedef</span> cl_##base_type type; }; \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -3003,10 +2888,9 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <div class="line">    } \</div>
 <div class="line">    return os &lt;&lt; &#39;)&#39;; \</div>
 <div class="line">} \</div>
-<div class="line">namespace cl { \</div>
-<div class="line">    typedef cl_##base_type##len base_type##len; \</div>
-<div class="line">    template &lt;&gt; <span class="keyword">struct </span>scalar_of&lt;cl_##base_type##len&gt; { <span class="keyword">typedef</span> cl_##base_type type; }; \</div>
-<div class="line">    template &lt;&gt; <span class="keyword">struct </span>vector_of&lt;cl_##base_type, len&gt; { <span class="keyword">typedef</span> cl_##base_type##len type; }; \</div>
+<div class="line">namespace vex { \</div>
+<div class="line">    template &lt;&gt; <span class="keyword">struct </span>cl_scalar_of&lt;cl_##base_type##len&gt; { <span class="keyword">typedef</span> cl_##base_type type; }; \</div>
+<div class="line">    template &lt;&gt; <span class="keyword">struct </span>cl_vector_of&lt;cl_##base_type, len&gt; { <span class="keyword">typedef</span> cl_##base_type##len type; }; \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

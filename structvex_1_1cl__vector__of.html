@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>VexCL: cl::vector_of&lt; T, dim &gt; Struct Template Reference</title>
+<title>VexCL: vex::cl_vector_of&lt; T, dim &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -41,22 +41,25 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>cl</b></li><li class="navelem"><a class="el" href="structcl_1_1vector__of.html">vector_of</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacevex.html">vex</a></li><li class="navelem"><a class="el" href="structvex_1_1cl__vector__of.html">cl_vector_of</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">cl::vector_of&lt; T, dim &gt; Struct Template Reference</div>  </div>
+<div class="title">vex::cl_vector_of&lt; T, dim &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Get the corresponding vector type for a CL scalar type.  
+ <a href="structvex_1_1cl__vector__of.html#details">More...</a></p>
 
 <p><code>#include &lt;types.hpp&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T, int dim&gt;<br/>
-struct cl::vector_of&lt; T, dim &gt;</h3>
+struct vex::cl_vector_of&lt; T, dim &gt;</h3>
 
 <p>Get the corresponding vector type for a CL scalar type. </p>
-<div class="fragment"><div class="line">vector_of&lt;cl_float, 4&gt;::type == cl_float4 </div>
+<div class="fragment"><div class="line">cl_vector_of&lt;cl_float, 4&gt;::type == cl_float4 </div>
 </div><!-- fragment --> </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="types_8hpp.html">types.hpp</a></li>
 </ul>
