@@ -1,17 +1,17 @@
-<map id="operations.hpp" name="operations.hpp">
-<area shape="rect" id="node3" href="$generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="325,80,436,107"/>
-<area shape="rect" id="node7" href="$mpi_2operations_8hpp.html" title="Set of operations to be used in mpi::vector expressions." alt="" coords="25,155,143,181"/>
-<area shape="rect" id="node19" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="167,155,288,181"/>
-<area shape="rect" id="node23" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="482,80,571,107"/>
-<area shape="rect" id="node5" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="458,229,539,256"/>
-<area shape="rect" id="node9" href="$mpi_2multivector_8hpp.html" title="MPI wrapper for vex::multivector." alt="" coords="159,229,280,256"/>
-<area shape="rect" id="node13" href="$mpi_2reduce_8hpp.html" title="MPI wrapper for vex::Reductor." alt="" coords="305,229,399,256"/>
-<area shape="rect" id="node16" href="$mpi_2vector_8hpp.html" title="MPI wrapper for vex::vector." alt="" coords="39,229,128,256"/>
-<area shape="rect" id="node11" href="$mpi_8hpp.html" title="MPI wrappers for VexCL types." alt="" coords="248,304,321,331"/>
-<area shape="rect" id="node25" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration." alt="" coords="812,155,888,181"/>
-<area shape="rect" id="node27" href="$fft_8hpp.html" title="Fast Fourier Transformation." alt="" coords="778,229,840,256"/>
-<area shape="rect" id="node32" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="313,155,407,181"/>
-<area shape="rect" id="node36" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="647,155,737,181"/>
-<area shape="rect" id="node42" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="481,155,572,181"/>
-<area shape="rect" id="node38" href="$mpi_2spmat_8hpp.html" title="MPI wrapper for vex::SpMat." alt="" coords="611,229,701,256"/>
+<map id="vexcl/operations.hpp" name="vexcl/operations.hpp">
+<area shape="rect" id="node3" href="$generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="421,80,568,107"/>
+<area shape="rect" id="node7" href="$mpi_2operations_8hpp.html" title="Set of operations to be used in mpi::vector expressions." alt="" coords="24,155,206,181"/>
+<area shape="rect" id="node19" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="230,155,386,181"/>
+<area shape="rect" id="node23" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="617,80,740,107"/>
+<area shape="rect" id="node5" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="603,229,719,256"/>
+<area shape="rect" id="node9" href="$mpi_2multivector_8hpp.html" title="MPI wrapper for vex::multivector." alt="" coords="188,229,372,256"/>
+<area shape="rect" id="node13" href="$mpi_2reduce_8hpp.html" title="MPI wrapper for vex::Reductor." alt="" coords="396,229,554,256"/>
+<area shape="rect" id="node16" href="$mpi_2vector_8hpp.html" title="MPI wrapper for vex::vector." alt="" coords="12,229,164,256"/>
+<area shape="rect" id="node11" href="$mpi_8hpp.html" title="MPI wrappers for VexCL types." alt="" coords="323,304,432,331"/>
+<area shape="rect" id="node25" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration." alt="" coords="1021,155,1150,181"/>
+<area shape="rect" id="node27" href="$fft_8hpp.html" title="Fast Fourier Transformation." alt="" coords="950,229,1048,256"/>
+<area shape="rect" id="node32" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="410,155,539,181"/>
+<area shape="rect" id="node36" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="818,155,944,181"/>
+<area shape="rect" id="node42" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="616,155,742,181"/>
+<area shape="rect" id="node38" href="$mpi_2spmat_8hpp.html" title="MPI wrapper for vex::SpMat." alt="" coords="762,229,915,256"/>
 </map>

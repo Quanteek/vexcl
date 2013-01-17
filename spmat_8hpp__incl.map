@@ -1,4 +1,4 @@
-<map id="spmat.hpp" name="spmat.hpp">
+<map id="vexcl/spmat.hpp" name="vexcl/spmat.hpp">
 <area shape="rect" id="node21" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1370,80,1493,107"/>
 <area shape="rect" id="node34" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="904,155,1008,181"/>
 <area shape="rect" id="node58" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1911,155,2039,181"/>

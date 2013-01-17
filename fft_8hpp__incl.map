@@ -1,4 +1,4 @@
-<map id="fft.hpp" name="fft.hpp">
+<map id="vexcl/fft.hpp" name="vexcl/fft.hpp">
 <area shape="rect" id="node5" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1309,155,1432,181"/>
 <area shape="rect" id="node73" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration." alt="" coords="1702,80,1831,107"/>
 <area shape="rect" id="node23" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="883,229,987,256"/>

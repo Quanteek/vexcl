@@ -1,4 +1,4 @@
-<map id="vector.hpp" name="vector.hpp">
+<map id="vexcl/mpi/vector.hpp" name="vexcl/mpi/vector.hpp">
 <area shape="rect" id="node7" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1227,80,1351,107"/>
 <area shape="rect" id="node75" href="$mpi_2util_8hpp.html" title="MPI related utilities." alt="" coords="783,80,915,107"/>
 <area shape="rect" id="node82" href="$mpi_2operations_8hpp.html" title="Set of operations to be used in mpi::vector expressions." alt="" coords="2079,80,2260,107"/>

@@ -1,4 +1,4 @@
-<map id="vector.hpp" name="vector.hpp">
+<map id="vexcl/vector.hpp" name="vexcl/vector.hpp">
 <area shape="rect" id="node19" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="809,80,913,107"/>
 <area shape="rect" id="node44" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1532,80,1660,107"/>
 <area shape="rect" id="node61" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="2223,80,2376,107"/>

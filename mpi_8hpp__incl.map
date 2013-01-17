@@ -1,4 +1,4 @@
-<map id="mpi.hpp" name="mpi.hpp">
+<map id="vexcl/mpi.hpp" name="vexcl/mpi.hpp">
 <area shape="rect" id="node3" href="$mpi_2vector_8hpp.html" title="MPI wrapper for vex::vector." alt="" coords="1769,80,1921,107"/>
 <area shape="rect" id="node88" href="$mpi_2multivector_8hpp.html" title="MPI wrapper for vex::multivector." alt="" coords="1196,80,1380,107"/>
 <area shape="rect" id="node109" href="$mpi_2reduce_8hpp.html" title="MPI wrapper for vex::Reductor." alt="" coords="1588,80,1745,107"/>

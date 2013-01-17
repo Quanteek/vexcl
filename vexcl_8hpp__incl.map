@@ -1,4 +1,4 @@
-<map id="vexcl.hpp" name="vexcl.hpp">
+<map id="vexcl/vexcl.hpp" name="vexcl/vexcl.hpp">
 <area shape="rect" id="node7" href="$devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="2865,155,2991,181"/>
 <area shape="rect" id="node55" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1223,155,1347,181"/>
 <area shape="rect" id="node67" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="308,237,436,264"/>

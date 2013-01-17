@@ -1,4 +1,4 @@
-<map id="spmat.hpp" name="spmat.hpp">
+<map id="vexcl/mpi/spmat.hpp" name="vexcl/mpi/spmat.hpp">
 <area shape="rect" id="node11" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="1825,80,1951,107"/>
 <area shape="rect" id="node90" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector." alt="" coords="1225,80,1351,107"/>
 <area shape="rect" id="node93" href="$mpi_2util_8hpp.html" title="MPI related utilities." alt="" coords="2398,80,2529,107"/>
