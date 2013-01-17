@@ -9,7 +9,7 @@
 <area shape="rect" id="node27" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="1096,320,1200,347"/>
 <area shape="rect" id="node52" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1883,320,2011,347"/>
 <area shape="rect" id="node68" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="338,320,491,347"/>
-<area shape="rect" id="node50" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl::float4, operator+." alt="" coords="1127,403,1247,429"/>
+<area shape="rect" id="node50" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="1127,403,1247,429"/>
 <area shape="rect" id="node91" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="1210,163,1365,189"/>
 <area shape="rect" id="node112" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="1407,163,1536,189"/>
 <area shape="rect" id="node129" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="2111,163,2237,189"/>

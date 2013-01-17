@@ -9,6 +9,6 @@
 <area shape="rect" id="node136" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector." alt="" coords="5,80,131,107"/>
 <area shape="rect" id="node139" href="$generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="1845,155,1992,181"/>
 <area shape="rect" id="node19" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="1956,237,2060,264"/>
-<area shape="rect" id="node45" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl::float4, operator+." alt="" coords="2203,328,2323,355"/>
+<area shape="rect" id="node45" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="2203,328,2323,355"/>
 <area shape="rect" id="node84" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="1626,237,1779,264"/>
 </map>

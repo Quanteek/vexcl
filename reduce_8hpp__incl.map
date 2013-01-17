@@ -3,5 +3,5 @@
 <area shape="rect" id="node27" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="893,155,997,181"/>
 <area shape="rect" id="node51" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1515,155,1643,181"/>
 <area shape="rect" id="node68" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="2226,155,2379,181"/>
-<area shape="rect" id="node49" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl::float4, operator+." alt="" coords="916,237,1036,264"/>
+<area shape="rect" id="node49" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="916,237,1036,264"/>
 </map>

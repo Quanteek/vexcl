@@ -4,6 +4,6 @@
 <area shape="rect" id="node23" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="883,229,987,256"/>
 <area shape="rect" id="node48" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1495,229,1623,256"/>
 <area shape="rect" id="node64" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="2223,229,2376,256"/>
-<area shape="rect" id="node46" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl::float4, operator+." alt="" coords="281,312,401,339"/>
+<area shape="rect" id="node46" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="281,312,401,339"/>
 <area shape="rect" id="node76" href="$kernels_8hpp.html" title="Kernel generator for FFT." alt="" coords="1698,155,1845,181"/>
 </map>

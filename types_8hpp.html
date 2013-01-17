@@ -55,7 +55,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>C++ sugar for OpenCL vector types, eg. cl::float4, operator+.  
+<p>C++ sugar for OpenCL vector types, eg. cl_float4, operator+.  
 <a href="#details">More...</a></p>
 <div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -74,6 +74,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1cl__vector__of.html">vex::cl_vector_of&lt; T, dim &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the corresponding vector type for a CL scalar type.  <a href="structvex_1_1cl__vector__of.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1cl__vector__length.html">vex::cl_vector_length&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of values in a CL vector (or scalar) type.  <a href="structvex_1_1cl__vector__length.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -2737,7 +2740,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <tr class="separator:ae5dec7a15dcca7ee392fb0d78fcaa896"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>C++ sugar for OpenCL vector types, eg. cl::float4, operator+. </p>
+<div class="textblock"><p>C++ sugar for OpenCL vector types, eg. cl_float4, operator+. </p>
 <dl class="section author"><dt>Author</dt><dd>Pascal Germroth <a href="#" onclick="location.href='mai'+'lto:'+'pas'+'ca'+'l@e'+'ns'+'iev'+'e.'+'org'; return false;">pasca<span style="display: none;">.nosp@m.</span>l@en<span style="display: none;">.nosp@m.</span>sieve<span style="display: none;">.nosp@m.</span>.org</a> </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="ab60437b9e16a35ac83daaea8dd058765"></a>
@@ -2840,6 +2843,8 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <div class="line">CL_VEC_TYPE(base_type, 16); \</div>
 <div class="line">namespace vex { \</div>
 <div class="line">    template &lt;&gt; <span class="keyword">struct </span>cl_scalar_of&lt;cl_##base_type&gt; { <span class="keyword">typedef</span> cl_##base_type type; }; \</div>
+<div class="line">    template &lt;&gt; <span class="keyword">struct </span>cl_vector_of&lt;cl_##base_type, 1&gt; { <span class="keyword">typedef</span> cl_##base_type type; }; \</div>
+<div class="line">    template &lt;&gt; <span class="keyword">struct </span>cl_vector_length&lt;cl_##base_type&gt; { <span class="keyword">enum</span> { value = 1 }; }; \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2891,6 +2896,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <div class="line">namespace vex { \</div>
 <div class="line">    template &lt;&gt; <span class="keyword">struct </span>cl_scalar_of&lt;cl_##base_type##len&gt; { <span class="keyword">typedef</span> cl_##base_type type; }; \</div>
 <div class="line">    template &lt;&gt; <span class="keyword">struct </span>cl_vector_of&lt;cl_##base_type, len&gt; { <span class="keyword">typedef</span> cl_##base_type##len type; }; \</div>
+<div class="line">    template &lt;&gt; <span class="keyword">struct </span>cl_vector_length&lt;cl_##base_type##len&gt; { <span class="keyword">enum</span> { value = len }; }; \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
