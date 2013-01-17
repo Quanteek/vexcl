@@ -141,11 +141,21 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46">vex::copy</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, std::vector&lt; T &gt; &amp;hv, cl_bool blocking=CL_TRUE)</td></tr>
 <tr class="memdesc:a7896b8bc121f843d62d724a98ebe3b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy device vector to host vector. <br/></td></tr>
 <tr class="separator:a7896b8bc121f843d62d724a98ebe3b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5865f915861ab1c82a6c431b0eb7153"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac5865f915861ab1c82a6c431b0eb7153"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac5865f915861ab1c82a6c431b0eb7153"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ac5865f915861ab1c82a6c431b0eb7153">vex::copy</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, T *hv, cl_bool blocking=CL_TRUE)</td></tr>
+<tr class="memdesc:ac5865f915861ab1c82a6c431b0eb7153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy device vector to host pointer. <br/></td></tr>
+<tr class="separator:ac5865f915861ab1c82a6c431b0eb7153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a581f96fb69b60b9fd62edd5843687634"><td class="memTemplParams" colspan="2"><a class="anchor" id="a581f96fb69b60b9fd62edd5843687634"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a581f96fb69b60b9fd62edd5843687634"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a581f96fb69b60b9fd62edd5843687634">vex::copy</a> (const std::vector&lt; T &gt; &amp;hv, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, cl_bool blocking=CL_TRUE)</td></tr>
 <tr class="memdesc:a581f96fb69b60b9fd62edd5843687634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host vector to device vector. <br/></td></tr>
 <tr class="separator:a581f96fb69b60b9fd62edd5843687634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f991a37abbd681928934314f8a4342"><td class="memTemplParams" colspan="2"><a class="anchor" id="a57f991a37abbd681928934314f8a4342"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a57f991a37abbd681928934314f8a4342"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a57f991a37abbd681928934314f8a4342">vex::copy</a> (const T *hv, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, cl_bool blocking=CL_TRUE)</td></tr>
+<tr class="memdesc:a57f991a37abbd681928934314f8a4342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host pointer to device vector. <br/></td></tr>
+<tr class="separator:a57f991a37abbd681928934314f8a4342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4ea02c21224302cffaa166e7bcaa2ed"><td class="memTemplParams" colspan="2">template&lt;class InputIterator , class OutputIterator &gt; </td></tr>
 <tr class="memitem:ab4ea02c21224302cffaa166e7bcaa2ed"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same<br class="typebreak"/>
 &lt; typename <br class="typebreak"/>
