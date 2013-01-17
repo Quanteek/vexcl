@@ -164,7 +164,31 @@ User-defined functions</h1>
 <div class="line">    <span class="keywordflow">return</span> sum(greater(x, y));</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>You could also write sum(greater(x + y, 5 * y)), or use any other expressions as parameters to the greater() call. Note that in the function body parameters are always named as prm1, prm2, etc.</p>
-<h1><a class="anchor" id="multivector"></a>
+<h1><a class="anchor" id="random"></a>
+Random number generation</h1>
+<p>VexCL provides random number generators from <a href="http://www.deshawresearch.com/resources_random123.html">Random123</a> suite, in which Nth random number can be obtained by applying a stateless mixing function to N instead of the conventional approach of using N iterations of a stateful transformation. This technique is easily parallelizable and is well suited for use in GPGPU applications.</p>
+<p>In order to use a random number sequence in a vector expression, user has to declare either <a class="el" href="structvex_1_1Random.html" title="A random generator.">vex::Random</a> or <a class="el" href="structvex_1_1RandomNormal.html" title="Returns normal distributed random numbers.">vex::RandomNormal</a> class template instance as in the following example: </p>
+<div class="fragment"><div class="line"><a class="code" href="structvex_1_1RandomNormal.html" title="Returns normal distributed random numbers.">vex::RandomNormal&lt;cl_double2, vex::random::philox&gt;</a> rnd;</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;cl_double2&gt;</a> x(ctx.queue(), size);</div>
+<div class="line"><span class="keywordtype">unsigned</span> seed = std::rand();</div>
+<div class="line"></div>
+<div class="line">x = rnd(<a class="code" href="namespacevex.html#ad1ffc8adc46bd709080cf30363531785" title="When used in vector expression, returns current element index plus offset.">vex::element_index</a>(), seed);</div>
+<div class="line"></div>
+<div class="line">Reductor&lt;size_t, SUM&gt; sum(ctx.queue());</div>
+<div class="line"></div>
+<div class="line">assert( fabs(sum(rnd(<a class="code" href="namespacevex.html#ad1ffc8adc46bd709080cf30363531785" title="When used in vector expression, returns current element index plus offset.">element_index</a>(), seed) - 0.5) / size) &lt; 1e-3 );</div>
+</div><!-- fragment --><p> Note that <a class="el" href="namespacevex.html#ad1ffc8adc46bd709080cf30363531785" title="When used in vector expression, returns current element index plus offset.">element_index()</a> here provides the random number generator with a sequence position N. You also can generate several independent random vectors by adjusting the <a class="el" href="namespacevex.html#ad1ffc8adc46bd709080cf30363531785" title="When used in vector expression, returns current element index plus offset.">element_index()</a> (or a seed): </p>
+<div class="fragment"><div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> x(ctx.queue(), n);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> y(ctx.queue(), n);</div>
+<div class="line"></div>
+<div class="line">RandomNormal&lt;double, random::threefry&gt; rnd;</div>
+<div class="line">Reductor&lt;size_t, SUM&gt; sum(ctx.queue());</div>
+<div class="line"></div>
+<div class="line">x = rnd(<a class="code" href="namespacevex.html#ad1ffc8adc46bd709080cf30363531785" title="When used in vector expression, returns current element index plus offset.">element_index</a>(0), seed);</div>
+<div class="line">y = rnd(<a class="code" href="namespacevex.html#ad1ffc8adc46bd709080cf30363531785" title="When used in vector expression, returns current element index plus offset.">element_index</a>(n), seed);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">double</span> pi = 8.0 * sum(x * x + y * y &lt; 1) / n;</div>
+</div><!-- fragment --><h1><a class="anchor" id="multivector"></a>
 Multi-component vectors</h1>
 <p>Class template vex::multivector&lt;T,N&gt; allows to store several equally sized device vectors and perform computations on all components synchronously. Operations are delegated to the underlying vectors. Expressions may include std::array&lt;T,N&gt; values, where N is equal to the number of multivector components. Each component gets corresponding element of std::array&lt;&gt; when expression is applied. </p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> n = 1 &lt;&lt; 20;</div>
