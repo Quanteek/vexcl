@@ -1,14 +1,19 @@
 <map id="vexcl/vexcl.hpp" name="vexcl/vexcl.hpp">
-<area shape="rect" id="node7" href="$devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="2865,155,2991,181"/>
-<area shape="rect" id="node55" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1223,155,1347,181"/>
-<area shape="rect" id="node67" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="308,237,436,264"/>
-<area shape="rect" id="node92" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="1307,80,1463,107"/>
-<area shape="rect" id="node107" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="814,80,943,107"/>
-<area shape="rect" id="node115" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="2165,80,2291,107"/>
-<area shape="rect" id="node129" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="387,80,513,107"/>
-<area shape="rect" id="node136" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector." alt="" coords="5,80,131,107"/>
-<area shape="rect" id="node139" href="$generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="1845,155,1992,181"/>
-<area shape="rect" id="node19" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="1956,237,2060,264"/>
-<area shape="rect" id="node45" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="2203,328,2323,355"/>
-<area shape="rect" id="node84" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="1626,237,1779,264"/>
+<area shape="rect" id="node7" href="$devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="733,229,859,256"/>
+<area shape="rect" id="node55" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="2019,229,2143,256"/>
+<area shape="rect" id="node67" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="992,312,1120,339"/>
+<area shape="rect" id="node92" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="2377,155,2532,181"/>
+<area shape="rect" id="node107" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="1142,155,1271,181"/>
+<area shape="rect" id="node115" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="1406,155,1532,181"/>
+<area shape="rect" id="node129" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="1557,155,1683,181"/>
+<area shape="rect" id="node136" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector." alt="" coords="346,80,472,107"/>
+<area shape="rect" id="node139" href="$random_8hpp.html" title="Random generators." alt="" coords="1932,80,2067,107"/>
+<area shape="rect" id="node145" href="$fft_8hpp.html" title="Fast Fourier Transformation." alt="" coords="1681,80,1780,107"/>
+<area shape="rect" id="node152" href="$generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="2934,229,3081,256"/>
+<area shape="rect" id="node19" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="2411,312,2515,339"/>
+<area shape="rect" id="node45" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="2021,403,2141,429"/>
+<area shape="rect" id="node84" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="3046,312,3199,339"/>
+<area shape="rect" id="node141" href="$philox_8hpp.html" title="Philox random generator." alt="" coords="1912,155,2088,181"/>
+<area shape="rect" id="node143" href="$threefry_8hpp.html" title="Threefry random generator." alt="" coords="2113,155,2300,181"/>
+<area shape="rect" id="node149" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration." alt="" coords="1707,155,1836,181"/>
 </map>
