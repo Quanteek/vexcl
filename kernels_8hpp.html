@@ -113,14 +113,33 @@ template&lt;class T &gt; </td></tr>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:ac0bfbe15e0c1a78e86050c5321da2a2d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fft::kernel_common</b> (std::ostringstream &amp;o)</td></tr>
 <tr class="separator:ac0bfbe15e0c1a78e86050c5321da2a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad414285fda40647a7b10405287154e33"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad414285fda40647a7b10405287154e33"></a>
+<tr class="memitem:a7200950f40f04cda372ec4f4ead98759"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7200950f40f04cda372ec4f4ead98759"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>vex::fft::mul_code</b> (std::ostringstream &amp;o, bool invert)</td></tr>
+<tr class="separator:a7200950f40f04cda372ec4f4ead98759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea9c5c806edfb07a9c8a004788be3d30"><td class="memTemplParams" colspan="2"><a class="anchor" id="aea9c5c806edfb07a9c8a004788be3d30"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:ad414285fda40647a7b10405287154e33"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fft::radix_kernel</b> (cl::CommandQueue &amp;queue, size_t n, size_t batch, bool invert, pow radix, size_t p, cl::Buffer in, cl::Buffer out)</td></tr>
-<tr class="separator:ad414285fda40647a7b10405287154e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80c0432a0c30500c4bc7aacab2761842"><td class="memTemplParams" colspan="2"><a class="anchor" id="a80c0432a0c30500c4bc7aacab2761842"></a>
+<tr class="memitem:aea9c5c806edfb07a9c8a004788be3d30"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fft::twiddle_code</b> (std::ostringstream &amp;o)</td></tr>
+<tr class="separator:aea9c5c806edfb07a9c8a004788be3d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13206f9c3b67f156831e6446844d7338"><td class="memTemplParams" colspan="2"><a class="anchor" id="a13206f9c3b67f156831e6446844d7338"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a80c0432a0c30500c4bc7aacab2761842"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fft::transpose_kernel</b> (cl::CommandQueue &amp;queue, size_t width, size_t height, cl::Buffer in, cl::Buffer out)</td></tr>
-<tr class="separator:a80c0432a0c30500c4bc7aacab2761842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13206f9c3b67f156831e6446844d7338"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fft::radix_kernel</b> (bool once, const cl::CommandQueue &amp;queue, size_t n, size_t batch, bool invert, pow radix, size_t p, const cl::Buffer &amp;in, const cl::Buffer &amp;out)</td></tr>
+<tr class="separator:a13206f9c3b67f156831e6446844d7338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae053a8a09885a3c2da39d42d0785c66e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae053a8a09885a3c2da39d42d0785c66e"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae053a8a09885a3c2da39d42d0785c66e"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fft::transpose_kernel</b> (const cl::CommandQueue &amp;queue, size_t width, size_t height, const cl::Buffer &amp;in, const cl::Buffer &amp;out)</td></tr>
+<tr class="separator:ae053a8a09885a3c2da39d42d0785c66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7797afd60458f9a8854b4e8b96ffff"><td class="memTemplParams" colspan="2"><a class="anchor" id="abc7797afd60458f9a8854b4e8b96ffff"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:abc7797afd60458f9a8854b4e8b96ffff"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fft::bluestein_twiddle</b> (const cl::CommandQueue &amp;queue, size_t n, bool inverse, const cl::Buffer &amp;out)</td></tr>
+<tr class="separator:abc7797afd60458f9a8854b4e8b96ffff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a78bf9afc69666f289346395009ac14"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7a78bf9afc69666f289346395009ac14"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a7a78bf9afc69666f289346395009ac14"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fft::bluestein_pad_kernel</b> (const cl::CommandQueue &amp;queue, size_t n, size_t m, const cl::Buffer &amp;in, const cl::Buffer &amp;out)</td></tr>
+<tr class="separator:a7a78bf9afc69666f289346395009ac14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24bb798f75f93953190938d89a4d31f"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac24bb798f75f93953190938d89a4d31f"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac24bb798f75f93953190938d89a4d31f"><td class="memTemplItemLeft" align="right" valign="top">kernel_call&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fft::bluestein_mul</b> (const cl::CommandQueue &amp;queue, size_t n, size_t batch, size_t pad_x, size_t in_stride, size_t out_stride, const cl::Buffer &amp;data, const cl::Buffer &amp;exp, const cl::Buffer &amp;out, size_t div=1)</td></tr>
+<tr class="separator:ac24bb798f75f93953190938d89a4d31f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Kernel generator for FFT. </p>

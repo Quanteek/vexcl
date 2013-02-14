@@ -182,13 +182,13 @@ Random number generation</h1>
 <div class="fragment"><div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> x(ctx, n);</div>
 <div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> y(ctx, n);</div>
 <div class="line"></div>
-<div class="line">RandomNormal&lt;double, random::threefry&gt; rnd;</div>
+<div class="line">Random&lt;double, random::threefry&gt; rnd;</div>
 <div class="line">Reductor&lt;size_t, SUM&gt; sum(ctx);</div>
 <div class="line"></div>
 <div class="line">x = rnd(<a class="code" href="namespacevex.html#ad1ffc8adc46bd709080cf30363531785" title="When used in vector expression, returns current element index plus offset.">element_index</a>(0), seed);</div>
 <div class="line">y = rnd(<a class="code" href="namespacevex.html#ad1ffc8adc46bd709080cf30363531785" title="When used in vector expression, returns current element index plus offset.">element_index</a>(n), seed);</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">double</span> pi = 8.0 * sum(x * x + y * y &lt; 1) / n;</div>
+<div class="line"><span class="keywordtype">double</span> pi = 4.0 * sum(x * x + y * y &lt; 1) / n;</div>
 </div><!-- fragment --><h1><a class="anchor" id="multivector"></a>
 Multi-component vectors</h1>
 <p>Class template vex::multivector&lt;T,N&gt; allows to store several equally sized device vectors and perform computations on all components synchronously. Operations are delegated to the underlying vectors. Expressions may include std::array&lt;T,N&gt; values, where N is equal to the number of multivector components. Each component gets corresponding element of std::array&lt;&gt; when expression is applied. </p>
