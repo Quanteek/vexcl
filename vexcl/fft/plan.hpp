@@ -32,6 +32,7 @@ THE SOFTWARE.
  */
 
 #include <cmath>
+#include <deque>
 
 #include <vexcl/vector.hpp>
 #include <vexcl/fft/kernels.hpp>
@@ -150,7 +151,7 @@ struct plan {
     std::vector<kernel_call> kernels;
 
     size_t input, output;
-    std::vector<cl::Buffer> bufs;
+    std::deque< vex::vector<T2> > bufs;
 
     // \param sizes
     //  1D case: {n}.
@@ -167,8 +168,8 @@ struct plan {
         size_t total_n = std::accumulate(sizes.begin(), sizes.end(), 1, std::multiplies<size_t>());
         scale = inverse ? ((T)1 / total_n) : 1;
 
-        size_t current = bufs.size(); bufs.push_back(cl::Buffer(context, CL_MEM_READ_WRITE, sizeof(T2) * total_n));
-        size_t other = bufs.size(); bufs.push_back(cl::Buffer(context, CL_MEM_READ_WRITE, sizeof(T2) * total_n));
+        size_t current = bufs.size(); bufs.push_back(vex::vector<T2>(queues, total_n));
+        size_t other   = bufs.size(); bufs.push_back(vex::vector<T2>(queues, total_n));
 
         // Build the list of kernels.
         input = current;
@@ -186,7 +187,7 @@ struct plan {
 
             // transpose.
             if(w > 1 && h > 1) {
-                kernels.push_back(transpose_kernel<T>(queue, w, h, bufs[current], bufs[other]));
+                kernels.push_back(transpose_kernel<T>(queue, w, h, bufs[current](), bufs[other]()));
                 std::swap(current, other);
             }
         }
@@ -198,7 +199,7 @@ struct plan {
         auto rs = planner.factor(n);
         for(auto r = rs.begin() ; r != rs.end() ; r++) {
             kernels.push_back(radix_kernel<T>(once, queues[0], n, batch,
-                inverse, *r, p, bufs[current], bufs[other]));
+                inverse, *r, p, bufs[current](), bufs[other]()));
             std::swap(current, other);
             p *= r->value;
         }
@@ -211,33 +212,33 @@ struct plan {
         size_t conv_n = planner.best_size(2 * n - 1);
         auto context = qctx(queues[0]);
 
-        size_t b_original = bufs.size(); bufs.push_back(cl::Buffer(context, CL_MEM_READ_WRITE, sizeof(T2) * n));
-        size_t b_other = bufs.size(); bufs.push_back(cl::Buffer(context, CL_MEM_READ_WRITE, sizeof(T2) * conv_n));
-        size_t b_current = bufs.size(); bufs.push_back(cl::Buffer(context, CL_MEM_READ_WRITE, sizeof(T2) * conv_n));
-        size_t a_current = bufs.size(); bufs.push_back(cl::Buffer(context, CL_MEM_READ_WRITE, sizeof(T2) * conv_n * batch));
-        size_t a_other = bufs.size(); bufs.push_back(cl::Buffer(context, CL_MEM_READ_WRITE, sizeof(T2) * conv_n * batch));
+        size_t b_original = bufs.size(); bufs.push_back(vex::vector<T2>(n));
+        size_t b_other    = bufs.size(); bufs.push_back(vex::vector<T2>(conv_n));
+        size_t b_current  = bufs.size(); bufs.push_back(vex::vector<T2>(conv_n));
+        size_t a_current  = bufs.size(); bufs.push_back(vex::vector<T2>(conv_n * batch));
+        size_t a_other    = bufs.size(); bufs.push_back(vex::vector<T2>(conv_n * batch));
 
         kernels.push_back(bluestein_twiddle<T>(queues[0], n, inverse,
-            bufs[b_original])); // once
+            bufs[b_original]())); // once
 
         kernels.push_back(bluestein_pad_kernel<T>(queues[0], n, conv_n,
-            bufs[b_original], bufs[b_current])); // once
+            bufs[b_original](), bufs[b_current]())); // once
 
         plan_cooley_tukey(false, conv_n, 1, b_current, b_other, /*once*/true);
 
         kernels.push_back(bluestein_mul<T>(queues[0], conv_n, batch, /*pad*/n, /*in s*/n, /*out s*/conv_n,
-            bufs[current], bufs[b_original], bufs[a_current]));
+            bufs[current](), bufs[b_original](), bufs[a_current]()));
 
         plan_cooley_tukey(false, conv_n, batch, a_current, a_other, false);
 
         kernels.push_back(bluestein_mul<T>(queues[0], conv_n, batch, /*pad*/conv_n, /*in s*/conv_n, /*outs*/conv_n,
-            bufs[a_current], bufs[b_current], bufs[a_other]));
+            bufs[a_current](), bufs[b_current](), bufs[a_other]()));
         std::swap(a_current, a_other);
 
         plan_cooley_tukey(true, conv_n, batch, a_current, a_other, false);
 
         kernels.push_back(bluestein_mul<T>(queues[0], n, batch, /*pad*/n, /*in s*/conv_n, /*out s*/n,
-            bufs[a_current], bufs[b_original], bufs[other], /*div*/conv_n));
+            bufs[a_current](), bufs[b_original](), bufs[other](), /*div*/conv_n));
         std::swap(current, other);
     }
 
@@ -245,9 +246,8 @@ struct plan {
     /// Converts real-valued input and output, supports multiply-adding to output.
     template<class Expr>
     void operator()(const Expr &in, vector<T1> &out, bool append, T ex_scale) {
-        vector<T2> in_c(queues[0], bufs[input]);
-        if(std::is_same<T0, T>::value) in_c = r2c(in);
-        else in_c = in;
+        if(std::is_same<T0, T>::value) bufs[input] = r2c(in);
+        else bufs[input] = in;
 
         for(auto run = kernels.begin(); run != kernels.end(); ++run) {
             if(!run->once || run->count == 0) {
@@ -257,13 +257,12 @@ struct plan {
             }
         }
 
-        vector<T2> out_c(queues[0], bufs[output]);
         if(std::is_same<T1, T>::value) {
-            if(append) out += c2r(out_c) * (ex_scale * scale);
-            else out = c2r(out_c) * (ex_scale * scale);
+            if(append) out += c2r(bufs[output]) * (ex_scale * scale);
+            else       out  = c2r(bufs[output]) * (ex_scale * scale);
         } else {
-            if(append) out += out_c * (ex_scale * scale);
-            else out = out_c * (ex_scale * scale);
+            if(append) out += bufs[output] * (ex_scale * scale);
+            else       out  = bufs[output] * (ex_scale * scale);
         }
     }
 };
