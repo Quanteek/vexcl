@@ -1,9 +1,9 @@
 <map id="vexcl/mpi/vector.hpp" name="vexcl/mpi/vector.hpp">
-<area shape="rect" id="node7" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1227,80,1351,107"/>
-<area shape="rect" id="node75" href="$mpi_2util_8hpp.html" title="MPI related utilities." alt="" coords="783,80,915,107"/>
-<area shape="rect" id="node82" href="$mpi_2operations_8hpp.html" title="Set of operations to be used in mpi::vector expressions." alt="" coords="2079,80,2260,107"/>
-<area shape="rect" id="node25" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="945,155,1049,181"/>
-<area shape="rect" id="node50" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1509,155,1637,181"/>
-<area shape="rect" id="node66" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="2215,155,2368,181"/>
-<area shape="rect" id="node48" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="816,237,936,264"/>
+<area shape="rect" id="node7" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1942,80,2065,107"/>
+<area shape="rect" id="node83" href="$mpi_2util_8hpp.html" title="MPI related utilities." alt="" coords="1345,80,1476,107"/>
+<area shape="rect" id="node90" href="$mpi_2operations_8hpp.html" title="Set of operations to be used in mpi::vector expressions." alt="" coords="3044,80,3225,107"/>
+<area shape="rect" id="node25" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="2067,155,2171,181"/>
+<area shape="rect" id="node50" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1283,155,1411,181"/>
+<area shape="rect" id="node74" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="3181,155,3333,181"/>
+<area shape="rect" id="node48" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="2491,237,2611,264"/>
 </map>

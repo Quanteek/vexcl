@@ -1,17 +1,17 @@
 <map id="vexcl/mpi.hpp" name="vexcl/mpi.hpp">
-<area shape="rect" id="node3" href="$mpi_2vector_8hpp.html" title="MPI wrapper for vex::vector." alt="" coords="1769,80,1921,107"/>
-<area shape="rect" id="node88" href="$mpi_2multivector_8hpp.html" title="MPI wrapper for vex::multivector." alt="" coords="1196,80,1380,107"/>
-<area shape="rect" id="node109" href="$mpi_2reduce_8hpp.html" title="MPI wrapper for vex::Reductor." alt="" coords="1588,80,1745,107"/>
-<area shape="rect" id="node122" href="$mpi_2spmat_8hpp.html" title="MPI wrapper for vex::SpMat." alt="" coords="2173,80,2327,107"/>
-<area shape="rect" id="node9" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1479,245,1603,272"/>
-<area shape="rect" id="node77" href="$mpi_2util_8hpp.html" title="MPI related utilities." alt="" coords="2262,163,2393,189"/>
-<area shape="rect" id="node84" href="$mpi_2operations_8hpp.html" title="Set of operations to be used in mpi::vector expressions." alt="" coords="1004,163,1185,189"/>
-<area shape="rect" id="node27" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="1096,320,1200,347"/>
-<area shape="rect" id="node52" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1883,320,2011,347"/>
-<area shape="rect" id="node68" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="338,320,491,347"/>
-<area shape="rect" id="node50" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="1127,403,1247,429"/>
-<area shape="rect" id="node91" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="1210,163,1365,189"/>
-<area shape="rect" id="node112" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="1407,163,1536,189"/>
-<area shape="rect" id="node129" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="2111,163,2237,189"/>
-<area shape="rect" id="node141" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector." alt="" coords="1579,320,1705,347"/>
+<area shape="rect" id="node3" href="$mpi_2vector_8hpp.html" title="MPI wrapper for vex::vector." alt="" coords="2439,80,2591,107"/>
+<area shape="rect" id="node96" href="$mpi_2multivector_8hpp.html" title="MPI wrapper for vex::multivector." alt="" coords="1529,80,1713,107"/>
+<area shape="rect" id="node117" href="$mpi_2reduce_8hpp.html" title="MPI wrapper for vex::Reductor." alt="" coords="2257,80,2415,107"/>
+<area shape="rect" id="node130" href="$mpi_2spmat_8hpp.html" title="MPI wrapper for vex::SpMat." alt="" coords="2843,80,2996,107"/>
+<area shape="rect" id="node9" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1886,245,2009,272"/>
+<area shape="rect" id="node85" href="$mpi_2util_8hpp.html" title="MPI related utilities." alt="" coords="2931,163,3063,189"/>
+<area shape="rect" id="node92" href="$mpi_2operations_8hpp.html" title="Set of operations to be used in mpi::vector expressions." alt="" coords="1337,163,1519,189"/>
+<area shape="rect" id="node27" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="1400,320,1504,347"/>
+<area shape="rect" id="node52" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="2064,320,2192,347"/>
+<area shape="rect" id="node76" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="338,320,491,347"/>
+<area shape="rect" id="node50" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="1323,403,1443,429"/>
+<area shape="rect" id="node99" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="1543,163,1699,189"/>
+<area shape="rect" id="node120" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="1770,163,1899,189"/>
+<area shape="rect" id="node137" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="2781,163,2907,189"/>
+<area shape="rect" id="node149" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector." alt="" coords="1811,320,1937,347"/>
 </map>

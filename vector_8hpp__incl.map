@@ -1,6 +1,6 @@
 <map id="vexcl/vector.hpp" name="vexcl/vector.hpp">
-<area shape="rect" id="node19" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="809,80,913,107"/>
-<area shape="rect" id="node44" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1532,80,1660,107"/>
-<area shape="rect" id="node61" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="2223,80,2376,107"/>
-<area shape="rect" id="node42" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="328,163,448,189"/>
+<area shape="rect" id="node19" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="869,80,973,107"/>
+<area shape="rect" id="node44" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1723,80,1851,107"/>
+<area shape="rect" id="node69" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="3190,80,3343,107"/>
+<area shape="rect" id="node42" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="923,163,1043,189"/>
 </map>

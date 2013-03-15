@@ -189,9 +189,9 @@ boost::proto::result_of::as_expr<br class="typebreak"/>
 &lt; elem_index &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad1ffc8adc46bd709080cf30363531785">element_index</a> (size_t offset=0)</td></tr>
 <tr class="memdesc:ad1ffc8adc46bd709080cf30363531785"><td class="mdescLeft">&#160;</td><td class="mdescRight">When used in vector expression, returns current element index plus offset. <br/></td></tr>
 <tr class="separator:ad1ffc8adc46bd709080cf30363531785"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
-<tr class="memdesc:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights device wrt to spmv performance.  <a href="#a8ffb5d87908b8cbbc57d6ffb2a29aeec">More...</a><br/></td></tr>
-<tr class="separator:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad35e5733c1fb53fbc1b8bf0eaf020219"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad35e5733c1fb53fbc1b8bf0eaf020219">device_spmv_perf</a> (const cl::CommandQueue &amp;)</td></tr>
+<tr class="memdesc:ad35e5733c1fb53fbc1b8bf0eaf020219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights device wrt to spmv performance.  <a href="#ad35e5733c1fb53fbc1b8bf0eaf020219">More...</a><br/></td></tr>
+<tr class="separator:ad35e5733c1fb53fbc1b8bf0eaf020219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6ed30e74c6b0ab0685466979e869e47"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac6ed30e74c6b0ab0685466979e869e47"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac6ed30e74c6b0ab0685466979e869e47"><td class="memTemplItemLeft" align="right" valign="top">conv&lt; <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt;, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s, const <a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &amp;x)</td></tr>
@@ -433,15 +433,15 @@ cl::Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 cl::Device&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ae299eb0d6e1f28d13e73820ac0c56a52">qdev</a> (const cl::CommandQueue &amp;q)</td></tr>
 <tr class="memdesc:ae299eb0d6e1f28d13e73820ac0c56a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for q.getInfo&lt;CL_QUEUE_DEVICE&gt;() <br/></td></tr>
 <tr class="separator:ae299eb0d6e1f28d13e73820ac0c56a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a47b97ac4ec3d1d74e854ec44c0c800d2">device_vector_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
-<tr class="memdesc:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights device wrt to vector performance.  <a href="#a47b97ac4ec3d1d74e854ec44c0c800d2">More...</a><br/></td></tr>
-<tr class="separator:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9a1b3e38f99d6dcdd5a9f1d4895012e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ab9a1b3e38f99d6dcdd5a9f1d4895012e">equal_weights</a> (const cl::Context &amp;, const cl::Device &amp;)</td></tr>
-<tr class="memdesc:ab9a1b3e38f99d6dcdd5a9f1d4895012e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns equal weight to each device.  <a href="#ab9a1b3e38f99d6dcdd5a9f1d4895012e">More...</a><br/></td></tr>
-<tr class="separator:ab9a1b3e38f99d6dcdd5a9f1d4895012e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa50a62a0e17e507e6b155f74e1b46eb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#aa50a62a0e17e507e6b155f74e1b46eb6">set_partitioning</a> (std::function&lt; double(const cl::Context &amp;, const cl::Device &amp;) &gt; f)</td></tr>
-<tr class="memdesc:aa50a62a0e17e507e6b155f74e1b46eb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitioning scheme for vectors and matrices.  <a href="#aa50a62a0e17e507e6b155f74e1b46eb6">More...</a><br/></td></tr>
-<tr class="separator:aa50a62a0e17e507e6b155f74e1b46eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96cd21126e72ca29af2e26548aaa6be7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a96cd21126e72ca29af2e26548aaa6be7">device_vector_perf</a> (const cl::CommandQueue &amp;)</td></tr>
+<tr class="memdesc:a96cd21126e72ca29af2e26548aaa6be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights device wrt to vector performance.  <a href="#a96cd21126e72ca29af2e26548aaa6be7">More...</a><br/></td></tr>
+<tr class="separator:a96cd21126e72ca29af2e26548aaa6be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e4405c1b9c8309ba143cfe16e62a10b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a3e4405c1b9c8309ba143cfe16e62a10b">equal_weights</a> (const cl::CommandQueue &amp;)</td></tr>
+<tr class="memdesc:a3e4405c1b9c8309ba143cfe16e62a10b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns equal weight to each device.  <a href="#a3e4405c1b9c8309ba143cfe16e62a10b">More...</a><br/></td></tr>
+<tr class="separator:a3e4405c1b9c8309ba143cfe16e62a10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78bc6053024a03516dc980d107f602ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a78bc6053024a03516dc980d107f602ef">set_partitioning</a> (std::function&lt; double(const cl::CommandQueue &amp;) &gt; f)</td></tr>
+<tr class="memdesc:a78bc6053024a03516dc980d107f602ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitioning scheme for vectors and matrices.  <a href="#a78bc6053024a03516dc980d107f602ef">More...</a><br/></td></tr>
+<tr class="separator:a78bc6053024a03516dc980d107f602ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7107660147252c74f159b733c678c86e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7107660147252c74f159b733c678c86e"></a>
 std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>partition</b> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 <tr class="separator:a7107660147252c74f159b733c678c86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -574,7 +574,7 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="a8ffb5d87908b8cbbc57d6ffb2a29aeec"></a>
+<a class="anchor" id="ad35e5733c1fb53fbc1b8bf0eaf020219"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -584,19 +584,9 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
         <tr>
           <td class="memname">double vex::device_spmv_perf </td>
           <td>(</td>
-          <td class="paramtype">const cl::Context &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const cl::CommandQueue &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const cl::Device &amp;&#160;</td>
-          <td class="paramname"><em>device</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -616,7 +606,7 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a47b97ac4ec3d1d74e854ec44c0c800d2"></a>
+<a class="anchor" id="a96cd21126e72ca29af2e26548aaa6be7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -626,19 +616,9 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
         <tr>
           <td class="memname">double vex::device_vector_perf </td>
           <td>(</td>
-          <td class="paramtype">const cl::Context &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const cl::CommandQueue &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const cl::Device &amp;&#160;</td>
-          <td class="paramname"><em>device</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -658,7 +638,7 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ab9a1b3e38f99d6dcdd5a9f1d4895012e"></a>
+<a class="anchor" id="a3e4405c1b9c8309ba143cfe16e62a10b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -668,19 +648,9 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
         <tr>
           <td class="memname">double vex::equal_weights </td>
           <td>(</td>
-          <td class="paramtype">const cl::Context &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const cl::CommandQueue &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const cl::Device &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -736,7 +706,7 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aa50a62a0e17e507e6b155f74e1b46eb6"></a>
+<a class="anchor" id="a78bc6053024a03516dc980d107f602ef"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -746,7 +716,7 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
         <tr>
           <td class="memname">void vex::set_partitioning </td>
           <td>(</td>
-          <td class="paramtype">std::function&lt; double(const cl::Context &amp;, const cl::Device &amp;) &gt;&#160;</td>
+          <td class="paramtype">std::function&lt; double(const cl::CommandQueue &amp;) &gt;&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
           <td></td>
         </tr>

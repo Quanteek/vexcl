@@ -61,9 +61,9 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a96c612140841cb9273cddad48c887fb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a96c612140841cb9273cddad48c887fb6">profiler</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, const std::string &amp;name=&quot;Profile&quot;)</td></tr>
-<tr class="memdesc:a96c612140841cb9273cddad48c887fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a96c612140841cb9273cddad48c887fb6">More...</a><br/></td></tr>
-<tr class="separator:a96c612140841cb9273cddad48c887fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c69fa025061638275a75c0c09bcfaa7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a1c69fa025061638275a75c0c09bcfaa7">profiler</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue=std::vector&lt; cl::CommandQueue &gt;(), const std::string &amp;name=&quot;Profile&quot;)</td></tr>
+<tr class="memdesc:a1c69fa025061638275a75c0c09bcfaa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a1c69fa025061638275a75c0c09bcfaa7">More...</a><br/></td></tr>
+<tr class="separator:a1c69fa025061638275a75c0c09bcfaa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b287d3d7d48cac0950418a33205255e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a6b287d3d7d48cac0950418a33205255e">tic_cpu</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a6b287d3d7d48cac0950418a33205255e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a CPU timer.  <a href="#a6b287d3d7d48cac0950418a33205255e">More...</a><br/></td></tr>
 <tr class="separator:a6b287d3d7d48cac0950418a33205255e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -81,7 +81,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for gathering and printing OpenCL and Host profiling info. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a96c612140841cb9273cddad48c887fb6"></a>
+<a class="anchor" id="a1c69fa025061638275a75c0c09bcfaa7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -92,7 +92,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="memname">vex::profiler::profiler </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; cl::CommandQueue &gt; &amp;&#160;</td>
-          <td class="paramname"><em>queue</em>, </td>
+          <td class="paramname"><em>queue</em> = <code>std::vector&lt;cl::CommandQueue&gt;()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -116,8 +116,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">queue</td><td>vector of command queues. Each queue should have been initialized with CL_QUEUE_PROFILING_ENABLE property. </td></tr>
-    <tr><td class="paramname">name</td><td>Opional name to be used when profiling info is printed. </td></tr>
+    <tr><td class="paramname">queue</td><td>vector of command queues. </td></tr>
+    <tr><td class="paramname">name</td><td>Optional name to be used when profiling info is printed. </td></tr>
   </table>
   </dd>
 </dl>
@@ -156,7 +156,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p>Referenced by <a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">vex::device_spmv_perf()</a>, and <a class="el" href="namespacevex.html#a47b97ac4ec3d1d74e854ec44c0c800d2">vex::device_vector_perf()</a>.</p>
+<p>Referenced by <a class="el" href="namespacevex.html#ad35e5733c1fb53fbc1b8bf0eaf020219">vex::device_spmv_perf()</a>, and <a class="el" href="namespacevex.html#a96cd21126e72ca29af2e26548aaa6be7">vex::device_vector_perf()</a>.</p>
 
 </div>
 </div>
@@ -218,7 +218,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Returns time since last tic. </p>
 <p>Also removes interval from the top of the profiler hierarchy. </p>
 
-<p>Referenced by <a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">vex::device_spmv_perf()</a>, and <a class="el" href="namespacevex.html#a47b97ac4ec3d1d74e854ec44c0c800d2">vex::device_vector_perf()</a>.</p>
+<p>Referenced by <a class="el" href="namespacevex.html#ad35e5733c1fb53fbc1b8bf0eaf020219">vex::device_spmv_perf()</a>, and <a class="el" href="namespacevex.html#a96cd21126e72ca29af2e26548aaa6be7">vex::device_vector_perf()</a>.</p>
 
 </div>
 </div>
