@@ -180,6 +180,10 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad16155790206b3bd1b9f7e792a3f3fef"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad16155790206b3bd1b9f7e792a3f3fef">exclusive_scan</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;src, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dst)</td></tr>
 <tr class="memdesc:ad16155790206b3bd1b9f7e792a3f3fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exclusive scan. <br/></td></tr>
 <tr class="separator:ad16155790206b3bd1b9f7e792a3f3fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ee2afe5ab14567e3900ecea19e46c78"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0ee2afe5ab14567e3900ecea19e46c78"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a0ee2afe5ab14567e3900ecea19e46c78">sort</a> (<a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x)</td></tr>
+<tr class="memdesc:a0ee2afe5ab14567e3900ecea19e46c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort.  <a href="#a0ee2afe5ab14567e3900ecea19e46c78">More...</a><br/></td></tr>
+<tr class="separator:a0ee2afe5ab14567e3900ecea19e46c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d23fe6f2794c7738f6948358afc5068"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4d23fe6f2794c7738f6948358afc5068"></a>
 template&lt;class T , size_t N, bool own&gt; </td></tr>
 <tr class="memitem:a4d23fe6f2794c7738f6948358afc5068"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4d23fe6f2794c7738f6948358afc5068">copy</a> (const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N, own &gt; &amp;mv, std::vector&lt; T &gt; &amp;hv)</td></tr>
@@ -744,6 +748,29 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
 
 <p>Partitioning scheme for vectors and matrices. </p>
 <p>Should be set once before any object of vector or matrix type is declared. Otherwise default parttioning function (partition_by_vector_perf) is selected. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ee2afe5ab14567e3900ecea19e46c78"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void vex::sort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sort. </p>
+<p>If there are more than one device in vector's queue list, then all partitions are sorted individually on GPUs and then merged on CPU. </p>
+
+<p>References <a class="el" href="classvex_1_1vector.html#ad15856f00b1c4b80726e6f908260ef57">vex::vector&lt; T &gt;::begin()</a>, <a class="el" href="namespacevex.html#a4d23fe6f2794c7738f6948358afc5068">copy()</a>, <a class="el" href="classvex_1_1vector.html#a5169d2645c884403fa690d45c77552fa">vex::vector&lt; T &gt;::end()</a>, <a class="el" href="classvex_1_1vector.html#a3404c8ef9b7b06ed88679d0247016359">vex::vector&lt; T &gt;::part_size()</a>, <a class="el" href="classvex_1_1vector.html#a030a51946c3ceef223f343dd5be33ec5">vex::vector&lt; T &gt;::part_start()</a>, <a class="el" href="classvex_1_1vector.html#a64c9b104b362b5ded3af3f3e2750efe5">vex::vector&lt; T &gt;::queue_list()</a>, and <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">vex::vector&lt; T &gt;::size()</a>.</p>
 
 </div>
 </div>
