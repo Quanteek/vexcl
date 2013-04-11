@@ -351,14 +351,6 @@ template&lt;size_t I, class Function , class Tuple &gt; </td></tr>
 ::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ae9cb7c79ff9cc17386c525237ff1bd1a">vex::for_each</a> (const Tuple &amp;, Function &amp;)</td></tr>
 <tr class="memdesc:ae9cb7c79ff9cc17386c525237ff1bd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over tuple elements. <br/></td></tr>
 <tr class="separator:ae9cb7c79ff9cc17386c525237ff1bd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d3fe52e80bf245c052cedbf50a3d388"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d3fe52e80bf245c052cedbf50a3d388"></a>
-cl::Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4d3fe52e80bf245c052cedbf50a3d388">vex::qctx</a> (const cl::CommandQueue &amp;q)</td></tr>
-<tr class="memdesc:a4d3fe52e80bf245c052cedbf50a3d388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for q.getInfo&lt;CL_QUEUE_CONTEXT&gt;() <br/></td></tr>
-<tr class="separator:a4d3fe52e80bf245c052cedbf50a3d388"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae299eb0d6e1f28d13e73820ac0c56a52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae299eb0d6e1f28d13e73820ac0c56a52"></a>
-cl::Device&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ae299eb0d6e1f28d13e73820ac0c56a52">vex::qdev</a> (const cl::CommandQueue &amp;q)</td></tr>
-<tr class="memdesc:ae299eb0d6e1f28d13e73820ac0c56a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for q.getInfo&lt;CL_QUEUE_DEVICE&gt;() <br/></td></tr>
-<tr class="separator:ae299eb0d6e1f28d13e73820ac0c56a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a820f9bfc5d19b05ae97d079a51f1cfa3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a820f9bfc5d19b05ae97d079a51f1cfa3"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8hpp.html#a820f9bfc5d19b05ae97d079a51f1cfa3">operator&lt;&lt;</a> (std::ostream &amp;os, const cl::Error &amp;e)</td></tr>
 <tr class="memdesc:a820f9bfc5d19b05ae97d079a51f1cfa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output description of an OpenCL error to a stream. <br/></td></tr>
@@ -366,8 +358,6 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a4c383d02ac43c2a77e6b222788abf74c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>vex::standard_kernel_header</b></td></tr>
-<tr class="separator:a4c383d02ac43c2a77e6b222788abf74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd2e037ede04b8ed7b76ae7047f3d111"><td class="memTemplParams" colspan="2"><a class="anchor" id="acd2e037ede04b8ed7b76ae7047f3d111"></a>
 template&lt;size_t I, class Function , class Tuple &gt; </td></tr>
 <tr class="memitem:acd2e037ede04b8ed7b76ae7047f3d111"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;(I<br class="typebreak"/>
@@ -375,6 +365,79 @@ template&lt;size_t I, class Function , class Tuple &gt; </td></tr>
 ::value), void &gt;::typefor_each(const <br class="typebreak"/>
 Tuple &amp;v, Function &amp;f){f(std::get<br class="typebreak"/>
 &lt; I &gt;v));for_each&lt; I+1 &gt;v, f);}inline <br class="typebreak"/>
+cl::Context qctx(const <br class="typebreak"/>
+cl::CommandQueue &amp;q){cl::Context <br class="typebreak"/>
+ctx;q.getInfo(CL_QUEUE_CONTEXT,&amp;ctx);return <br class="typebreak"/>
+ctx;}inline cl::Device qdev(const <br class="typebreak"/>
+cl::CommandQueue &amp;q){cl::Device <br class="typebreak"/>
+dev;q.getInfo(CL_QUEUE_DEVICE,&amp;dev);return <br class="typebreak"/>
+dev;}inline bool is_cpu(const <br class="typebreak"/>
+cl::Device &amp;d){return <br class="typebreak"/>
+d.getInfo&lt; CL_DEVICE_TYPE &gt;<br class="typebreak"/>
+)==CL_DEVICE_TYPE_CPU;}template<br class="typebreak"/>
+&lt; bool dummy &gt;struct <br class="typebreak"/>
+program_options{static_assert(dummy,&quot;dummy <br class="typebreak"/>
+parameter should be true&quot;);static <br class="typebreak"/>
+const std::string &amp;get_options(const <br class="typebreak"/>
+cl::Device &amp;dev){return <br class="typebreak"/>
+options[dev()];}static const <br class="typebreak"/>
+std::string &amp;get_header(const <br class="typebreak"/>
+cl::Device &amp;dev){return header[dev()];}static <br class="typebreak"/>
+void set_options(const <br class="typebreak"/>
+cl::Device &amp;dev, const <br class="typebreak"/>
+std::string &amp;str){options[dev()]=str;}static <br class="typebreak"/>
+void set_header(const <br class="typebreak"/>
+cl::Device &amp;dev, const <br class="typebreak"/>
+std::string &amp;str){header[dev()]=str;}private:static <br class="typebreak"/>
+std::map&lt; cl_device_id, <br class="typebreak"/>
+std::string &gt; options;static <br class="typebreak"/>
+std::map&lt; cl_device_id, <br class="typebreak"/>
+std::string &gt; header;};template<br class="typebreak"/>
+&lt; bool dummy &gt;std::map<br class="typebreak"/>
+&lt; cl_device_id, std::string &gt;<br class="typebreak"/>
+ program_options&lt; dummy &gt;<br class="typebreak"/>
+::options;template&lt; bool dummy &gt;<br class="typebreak"/>
+std::map&lt; cl_device_id, <br class="typebreak"/>
+std::string &gt; program_options<br class="typebreak"/>
+&lt; dummy &gt;::header;inline <br class="typebreak"/>
+std::string <br class="typebreak"/>
+get_program_options(const <br class="typebreak"/>
+cl::Device &amp;dev){return <br class="typebreak"/>
+program_options&lt; true &gt;<br class="typebreak"/>
+::get_options(dev);}inline <br class="typebreak"/>
+std::string get_program_header(const <br class="typebreak"/>
+cl::Device &amp;dev){return <br class="typebreak"/>
+program_options&lt; true &gt;<br class="typebreak"/>
+::get_header(dev);}inline void <br class="typebreak"/>
+set_program_options(const <br class="typebreak"/>
+cl::Device &amp;dev, const <br class="typebreak"/>
+std::string &amp;str){program_options<br class="typebreak"/>
+&lt; true &gt;::set_options(dev, str);}inline <br class="typebreak"/>
+void set_program_header(const <br class="typebreak"/>
+cl::Device &amp;dev, const <br class="typebreak"/>
+std::string &amp;str){program_options<br class="typebreak"/>
+&lt; true &gt;::set_header(dev, str);}inline <br class="typebreak"/>
+void set_program_options(const <br class="typebreak"/>
+std::vector&lt; cl::CommandQueue &gt;<br class="typebreak"/>
+ &amp;queue, const std::string <br class="typebreak"/>
+&amp;str){for(auto q=queue.begin();q!=queue.end();++q) <br class="typebreak"/>
+program_options&lt; true &gt;<br class="typebreak"/>
+::set_options(qdev(*q), str);}inline <br class="typebreak"/>
+void set_program_header(const <br class="typebreak"/>
+std::vector&lt; cl::CommandQueue &gt;<br class="typebreak"/>
+ &amp;queue, const std::string <br class="typebreak"/>
+&amp;str){for(auto q=queue.begin();q!=queue.end();++q) <br class="typebreak"/>
+program_options&lt; true &gt;<br class="typebreak"/>
+::set_header(qdev(*q), str);}inline <br class="typebreak"/>
+std::string <br class="typebreak"/>
+standard_kernel_header(const <br class="typebreak"/>
+cl::Device &amp;dev){return <br class="typebreak"/>
+std::string(&quot;#if defined(cl_khr_fp64)\n&quot;&quot;# <br class="typebreak"/>
+pragma OPENCL EXTENSION <br class="typebreak"/>
+cl_khr_fp64: enable\n&quot;&quot;#elif <br class="typebreak"/>
+defined(cl_amd_fp64)\n&quot;&quot;# <br class="typebreak"/>
+pragma OPENCL EXTENSION <br class="typebreak"/>
+cl_amd_fp64: enable\n&quot;&quot;#endif\n&quot;)+get_program_header(dev);}inline <br class="typebreak"/>
 cl::Program build_sources(const <br class="typebreak"/>
 cl::Context &amp;context, const <br class="typebreak"/>
 std::string &amp;source, const <br class="typebreak"/>
@@ -383,8 +446,8 @@ program(context, <br class="typebreak"/>
 cl::Program::Sources(1, <br class="typebreak"/>
 std::make_pair(source.c_str(), <br class="typebreak"/>
 source.size())));auto device=context.getInfo<br class="typebreak"/>
-&lt; CL_CONTEXT_DEVICES &gt;);try{program.build(device, <br class="typebreak"/>
-options.c_str());}catch(const <br class="typebreak"/>
+&lt; CL_CONTEXT_DEVICES &gt;);try{program.build(device,(options+&quot; <br class="typebreak"/>
+&quot;+get_program_options(device[0])).c_str());}catch(const <br class="typebreak"/>
 cl::Error &amp;){std::cerr<br class="typebreak"/>
 &lt;&lt; source&lt;&lt; std::endl<br class="typebreak"/>
 &lt;&lt; program.getBuildInfo<br class="typebreak"/>
