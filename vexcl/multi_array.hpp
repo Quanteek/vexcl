@@ -38,7 +38,7 @@ THE SOFTWARE.
 namespace vex {
 
 template <typename T, size_t NDIM>
-class multi_array : public vex::vector<T> {
+class multi_array : private vex::vector<T> {
     typedef vex::vector<T> Base;
 
     public:
@@ -49,8 +49,8 @@ class multi_array : public vex::vector<T> {
             /* NOTE: this simply allocates an accordingly sized vex::vector for
              * now. The things that should be taken into account:
              * 1. Pitching (padding the fastest dimension so that row-wise
-             *    acceses are coalesced). This is not as relevant on newer
-             *    harware as it used to be though.
+             *    accesses are coalesced). This is not as relevant on newer
+             *    hardware as it used to be though.
              * 2. Partitioning across devices. With the current approach
              *    arithmetic operations between equally sized multi_array will
              *    just work. But if we need to support dense matrix-vector
@@ -65,21 +65,22 @@ class multi_array : public vex::vector<T> {
                 )
         {
             assert(lengths.size() == NDIM);
+            std::copy(lengths.begin(), lengths.end(), len.begin());
         }
 
-        /* This currently only accepts normal vector expressions. As soon as
-         * expression includes a term of vex::multi_array type, there is
-         * runtime error "unsupported type in kernel".
-         *
-         * Creating separate Boost.Proto grammar for multi_arrays and only
-         * delegating suitable operations to vex::vectors would probably be a
-         * better idea anyway.
-         */
-        template <class Expr>
-        const multi_array& operator=(const Expr &expr) {
-            this->Base::operator=(expr);
-            return *this;
+        const Base& vec() const {
+            return static_cast<const Base&>(*this);
         }
+
+        Base& vec() {
+            return static_cast<Base&>(*this);
+        }
+
+        size_t size(size_t dim) const {
+            return len[dim];
+        }
+    private:
+        std::array<size_t, NDIM> len;
 };
 
 }
