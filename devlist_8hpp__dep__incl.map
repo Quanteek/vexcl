@@ -1,3 +1,16 @@
 <map id="vexcl/devlist.hpp" name="vexcl/devlist.hpp">
-<area shape="rect" id="node3" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="9,80,125,107"/>
+<area shape="rect" id="node3" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="325,80,448,107"/>
+<area shape="rect" id="node11" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="127,320,243,347"/>
+<area shape="rect" id="node5" href="$boost__compute_8hpp.html" title="Provides wrappers for some of Boost.Compute (https://github.com/kylelutz/compute) algorithms..." alt="" coords="628,155,776,197"/>
+<area shape="rect" id="node7" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration." alt="" coords="118,163,247,189"/>
+<area shape="rect" id="node9" href="$fft_8hpp.html" title="Fast Fourier Transformation." alt="" coords="49,245,148,272"/>
+<area shape="rect" id="node14" href="$mpi_2vector_8hpp.html" title="MPI wrapper for vex::vector." alt="" coords="1044,245,1196,272"/>
+<area shape="rect" id="node18" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="802,163,957,189"/>
+<area shape="rect" id="node24" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="271,163,400,189"/>
+<area shape="rect" id="node30" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="477,163,603,189"/>
+<area shape="rect" id="node36" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="223,245,349,272"/>
+<area shape="rect" id="node16" href="$mpi_8hpp.html" title="MPI wrappers for VexCL types." alt="" coords="776,320,885,347"/>
+<area shape="rect" id="node20" href="$mpi_2multivector_8hpp.html" title="MPI wrapper for vex::multivector." alt="" coords="836,245,1020,272"/>
+<area shape="rect" id="node26" href="$mpi_2reduce_8hpp.html" title="MPI wrapper for vex::Reductor." alt="" coords="375,245,532,272"/>
+<area shape="rect" id="node32" href="$mpi_2spmat_8hpp.html" title="MPI wrapper for vex::SpMat." alt="" coords="657,245,811,272"/>
 </map>

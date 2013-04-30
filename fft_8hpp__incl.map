@@ -1,9 +1,10 @@
 <map id="vexcl/fft.hpp" name="vexcl/fft.hpp">
-<area shape="rect" id="node5" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1762,155,1885,181"/>
-<area shape="rect" id="node81" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration." alt="" coords="2198,80,2327,107"/>
-<area shape="rect" id="node23" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="1360,229,1464,256"/>
-<area shape="rect" id="node48" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="2135,229,2263,256"/>
-<area shape="rect" id="node72" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="313,229,465,256"/>
-<area shape="rect" id="node46" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="1429,312,1549,339"/>
-<area shape="rect" id="node89" href="$kernels_8hpp.html" title="Kernel generator for FFT." alt="" coords="2419,155,2567,181"/>
+<area shape="rect" id="node5" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1209,155,1332,181"/>
+<area shape="rect" id="node100" href="$plan_8hpp.html" title="FFT plan, stores kernels and buffers for one configuration." alt="" coords="2450,80,2579,107"/>
+<area shape="rect" id="node23" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="500,312,604,339"/>
+<area shape="rect" id="node48" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="2381,312,2509,339"/>
+<area shape="rect" id="node72" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="1038,229,1191,256"/>
+<area shape="rect" id="node81" href="$devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="1425,229,1551,256"/>
+<area shape="rect" id="node46" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="728,403,848,429"/>
+<area shape="rect" id="node108" href="$kernels_8hpp.html" title="Kernel generator for FFT." alt="" coords="2809,155,2956,181"/>
 </map>

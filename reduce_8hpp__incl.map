@@ -1,7 +1,8 @@
 <map id="vexcl/reduce.hpp" name="vexcl/reduce.hpp">
-<area shape="rect" id="node11" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1287,80,1411,107"/>
-<area shape="rect" id="node27" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="921,155,1025,181"/>
-<area shape="rect" id="node51" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1881,155,2009,181"/>
-<area shape="rect" id="node76" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="3193,155,3345,181"/>
-<area shape="rect" id="node49" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="721,237,841,264"/>
+<area shape="rect" id="node11" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="695,80,819,107"/>
+<area shape="rect" id="node27" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="341,237,445,264"/>
+<area shape="rect" id="node51" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="2221,237,2349,264"/>
+<area shape="rect" id="node76" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="754,155,907,181"/>
+<area shape="rect" id="node85" href="$devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="1437,155,1563,181"/>
+<area shape="rect" id="node49" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="881,328,1001,355"/>
 </map>

@@ -1,8 +1,9 @@
 <map id="vexcl/fft/plan.hpp" name="vexcl/fft/plan.hpp">
-<area shape="rect" id="node7" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1308,155,1436,181"/>
-<area shape="rect" id="node37" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1770,80,1893,107"/>
-<area shape="rect" id="node85" href="$kernels_8hpp.html" title="Kernel generator for FFT." alt="" coords="1377,80,1524,107"/>
-<area shape="rect" id="node51" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="2025,155,2129,181"/>
-<area shape="rect" id="node76" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="3189,155,3341,181"/>
-<area shape="rect" id="node73" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="2499,237,2619,264"/>
+<area shape="rect" id="node7" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="659,237,787,264"/>
+<area shape="rect" id="node37" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1275,80,1399,107"/>
+<area shape="rect" id="node104" href="$kernels_8hpp.html" title="Kernel generator for FFT." alt="" coords="450,80,597,107"/>
+<area shape="rect" id="node51" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="2464,237,2568,264"/>
+<area shape="rect" id="node76" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="1121,155,1273,181"/>
+<area shape="rect" id="node85" href="$devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="1807,155,1933,181"/>
+<area shape="rect" id="node73" href="$types_8hpp.html" title="C++ sugar for OpenCL vector types, eg. cl_float4, operator+." alt="" coords="2055,328,2175,355"/>
 </map>
